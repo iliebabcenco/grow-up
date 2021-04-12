@@ -1,0 +1,13 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="menu" style="height: 5em; border-radius: 15px; align-content: space-between; margin: 0px auto;">
+    <ul id="menuList" style="margin: auto;">
+        <li><a href="../home.html">Main Page</a></li>
+        <li><a href="../news.html">Verifică noutăți</a></li>
+        <li><a href="cmsgestiuneserv">Solicitări</a></li>
+        <li><a href="cmsshowaddarticleserv">Articole</a></li>
+        <li><a href="cmschangeloanserv">Modifică credit</a></li>
+    </ul>
+    <div id="btnSolicita"><a href="cmslogoutserv">Log Out</a></div>
+    <div style="clear: both;"></div>
+
+</div>

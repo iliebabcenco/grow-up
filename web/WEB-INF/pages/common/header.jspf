@@ -1,0 +1,34 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" type="text/css" href="styless.css">
+<link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+
+<div id="menu">
+    <a id="logohref" href="home.html"><div id="logo">Grow Up</div></a>
+    <ul id="menuList">
+        <li><a href="aboutus.html">Despre Grow Up</a></li>
+        <li><a href="howobtain.html">Cum obțin</a></li>
+        <li><a href="howrefund.html">Cum rambursez</a></li>
+        <li><a href="answersquestions.html">Întrebări și răspunsuri</a></li>
+        <li><a href="news.html">Noutăți</a></li>
+        <li><a href="contacts.html">Contacte</a></li>
+    </ul>
+    <div style="clear: both;"></div>
+    <p id="contacterPar"> 022-22-22-22</p> <br>
+    <p>Contactează-ne</p>
+    <div id="goCont">
+        
+        <%  
+        String path = "login.html";
+        HttpSession currentSession = request.getSession(false);
+        
+        if (currentSession.getAttribute("MAINUSER") != null) {
+            path = "cms/cmsgestiuneserv";
+        }
+
+        %>
+        <a href="<%= path %>">Intră în cont</a>
+    
+    
+    </div>
+</div>
+

@@ -1,0 +1,723 @@
+#mainContent {
+    width: auto;
+    background-color: white;
+    margin: 0px auto;
+}
+body {
+    font-family: "Avenir Next Cyr";
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#menu {
+    width: 100%;
+    background-color: white;
+    font-family: "Avenir Next Cyr";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+
+}
+#menu ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    line-height: 75px;
+}
+#menu li {
+    margin-right: 15px;
+    margin-left: 20px; 
+    display: block;
+    font-weight: bold;
+
+}
+
+
+.collapsible {
+    color: #003366;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.active, .collapsible:hover {
+    color: #FF8900;
+    transition: 0.5s;
+
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+
+
+a {
+    color: #003366;	
+    text-decoration: none;
+    font-size: 19px;
+
+}
+#menu a:hover, #menu a:active, #cmsgestdiv a:hover{
+    text-decoration: none;
+    color: #FF8900;
+    transition-property: background-color, color;
+    transition: 0.5s;
+}
+#logo:hover {
+    text-decoration: none;
+    color: #FF8900;
+    transition-property: background-color, color;
+    transition: 0.5s;
+}
+#logohref{
+    margin-top: 15px;
+}
+#logo {
+    color: #003366;
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    font-size: 36px;
+    margin: 15px;
+    align-self: center;
+    transition: 1s;
+}
+
+#cont {
+    align-self: center;
+}
+#contacterPar {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    align-self: center;
+}
+#mainContent p {
+    display: block;
+    color: #003366;	
+    float: left;
+    align-self: center;
+}
+#menu p {
+    color: #003366;	
+    display: block;
+    align-self: center;
+}
+
+#promo {
+    width: 70%;
+    margin: 50px auto;
+    min-height: 600px;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+}
+
+
+
+#registeringdiv, #logindiv, #cmsgestdiv {
+    width: 50%;
+    margin: 50px auto;
+    min-height: 75%;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    border-radius: 15px;
+    display: block;
+    background-color: white; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    color: #003366;
+    position: relative;
+
+}
+
+#cmsaddarticle {
+    font-family: "Avenir Next Cyr";
+    margin: 50px auto;
+    width: 50%;
+    background-color: white;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    border-radius: 15px;
+    position: relative;
+}
+
+#logindiv {
+    height: 33em;
+}
+#registeringdiv, #logindiv {
+    width: 30%;
+    min-width: 390px;
+}
+#registeringdiv td {
+    padding-bottom: 10px;
+
+}
+
+.btnsolicita, .btnback, #btnlogin {
+    background-color: #FF8900;
+    color: #003366;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+    transition-property: box-shadow;
+    transition: 0.5s;
+    outline:none;
+}
+
+.btnsolicita:hover, .btnback:hover, #btnlogin:hover  {
+    color: #003366;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    transition: 0.5s;
+
+}
+#promocontacts {
+    width: 45%;
+    margin: 50px auto;
+    height: 685px;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+}
+#promocontacts1 {
+    float: left;
+    width: 45%;
+    margin: 15px;
+    margin-right: 0px;
+}
+#promocontacts2 {
+    float: right;
+    width: 45%;
+    margin: 15px;
+    margin-left: 0px;
+    color: #003366;
+}
+#newscontent {
+    width: 60%;
+
+    margin: 50px auto;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    color: #003366;
+    padding: 20px;
+    text-align: justify;
+}
+#promoAboutUs{
+    width: 60%;
+
+    margin: 50px auto;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    color: #003366;
+    padding: 20px;
+    text-align: justify;
+}
+#promoAboutUs img {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+}
+#promoAboutUs p {
+    margin-top: 0px;
+
+}
+#promohowobtain, #promohowrefund, #promoaq {
+    width: 60%;
+    margin: 50px auto;
+    auto-height: 950px;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    color: #003366;
+    padding: 20px;
+    text-align: justify;
+}
+#promoaq {
+    auto-height: true;
+}
+#promohowobtain {
+    height: 900px;
+}
+#howobtain {
+    width: 60%;
+    float: left;
+}
+#howobtain ul li {
+    padding: 0px;
+    margin: 0px;
+}
+
+#active {
+    background-image: url("images/sunysucces.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center center;
+    backface-visibility: hidden;
+    float: left;
+    width: 63%;
+    margin-right: 0px;
+    height: 600px;
+    animation: slideBg 8s linear 3s infinite alternate;
+    animation-timing-function: ease-in-out 6s;
+}
+@keyframes slideBg{
+    0%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    20%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    40%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    60%{
+        background-image: url("images/3.jpg");
+    }
+    80%{
+        background-image: url("images/3.jpg");
+    }
+    100%{
+        background-image: url("images/3.jpg");
+    }
+}
+#active p {
+    color: #003366;
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    font-size: 36px;
+    padding: 10px;
+}
+
+#slidecontainer {
+    float: right;
+    width: 33%;
+    color: #003366;	
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 85%;
+    height: 15px;
+    border-radius: 5px;
+    background: #003366;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FF8900;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+input {
+    font-family: "Avenir Next Cyr";
+    font-size: 16px;
+    width: auto;
+    height: 25px;
+}
+#minMaxSumDiv p, #minMaxTermDiv p{
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+#btnSolicita {
+    text-align: center;
+    background-color: #FF8900;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+#goCont, #goNext {
+    height: 25px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #FF8900;
+    display: block;
+}
+
+#btnSolicita:hover, #goCont:hover, #goNext:hover{
+    color: #003366;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    transition: 0.5s;
+    display: block;
+}
+#goCont:hover a{
+    color: #003366;
+}
+#content1 {
+    margin: 15px auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gonext {
+    align-self: center;
+    max-width: 50%;
+
+}
+#content2 {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 75px;
+    padding-top: 0px;
+    min-height: 700px;
+    background-image: url("images/fon.jpg");
+    background-size: cover;
+
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+}
+#content3 {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 75px;
+    padding-top: 0px;
+    min-height: 700px;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    color: #003366;
+    padding: 30px;
+}
+#content2right, #content2left{
+    float: left;
+    width: 45%;
+    color: #003366;
+    margin: 25px;
+    font-size: 24px;
+    font-weight: normal;
+}
+#content2right{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+#content2left {
+    margin-top: 0px;
+    float: right;
+    margin-right: 50px;
+}
+#content2right ol, #content2left ol {
+    list-style-type: circle;
+}
+#content2right h2, #content2left h2 {
+    text-align: center;
+    color: #003366;
+}
+
+
+hr{
+    border: 2px solid #FF8900;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+#aboutUsSpisok{
+    display: flex;
+    flex-direction: column;
+}
+#footer {
+    background-color: #0A2536;
+    min-height: 20%;
+    margin-bottom: 0px;
+    position: relative;
+}
+#innerFooter {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 0px;
+}
+#footerLeft {
+    margin-top: 15px;
+    margin-left: 50px;
+    float: left;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 0px;
+}
+
+#footerCenter {
+    margin-top: 100px;
+    margin-left: 130px;
+    margin-bottom: 0px;
+    color: white;
+    float: left;
+    font-size: 18px;
+    line-height: 2;
+
+}
+#footerRight {
+    margin-top: 2%;
+    /*    margin-left: 10%;*/
+    float: right;
+}
+#footerRight #visa, #footerRight #mastercard {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+#paboutus {
+    margin: 150px;
+}
+
+/* Hide the browser's default radio button */
+.containervenituri input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containervenituri:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containervenituri input:checked ~ .checkmark {
+    background-color: #FF8900;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containervenituri input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containervenituri .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+.containervenituri {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clearfix {
+    clear: both;
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/*incercam responsive*/
+
+/** {
+  box-sizing: border-box;
+}
+ For mobile phones: 
+[class*="collapsible-"] {
+  width: 100%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (min-width: 600px) {
+   For tablets: 
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+   For desktop: 
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+
+}
+.modal-content {
+    padding: 2%;
+    position: fixed;
+    margin: 0px auto;
+    border-radius: 10px;
+    left: 37%;
+    top: 10%;
+    background-color: #fefefe;
+    width: 25%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: gray;
+    float: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes slideIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
