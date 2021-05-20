@@ -35,9 +35,6 @@ public class AutentificationFilter implements Filter {
 
     private static final boolean debug = false;
 
-    // The filter configuration object we are associated with.  If
-    // this value is null, this filter instance is not currently
-    // configured. 
     private FilterConfig filterConfig = null;
 
     public AutentificationFilter() {
@@ -48,36 +45,6 @@ public class AutentificationFilter implements Filter {
         if (debug) {
             log("AutentificationFilter:DoBeforeProcessing");
         }
-
-        // Write code here to process the request and/or response before
-        // the rest of the filter chain is invoked.
-        // For example, a filter that implements setParameter() on a request
-        // wrapper could set parameters on the request before passing it on
-        // to the filter chain.
-        /*
-	String [] valsOne = {"val1a", "val1b"};
-	String [] valsTwo = {"val2a", "val2b", "val2c"};
-	request.setParameter("name1", valsOne);
-	request.setParameter("nameTwo", valsTwo);
-         */
-        // For example, a logging filter might log items on the request object,
-        // such as the parameters.
-        /*
-	for (Enumeration en = request.getParameterNames(); en.hasMoreElements(); ) {
-	    String name = (String)en.nextElement();
-	    String values[] = request.getParameterValues(name);
-	    int n = values.length;
-	    StringBuffer buf = new StringBuffer();
-	    buf.append(name);
-	    buf.append("=");
-	    for(int i=0; i < n; i++) {
-	        buf.append(values[i]);
-	        if (i < n-1)
-	            buf.append(",");
-	    }
-	    log(buf.toString());
-	}
-         */
     }
 
     private void doAfterProcessing(RequestWrapper request, ResponseWrapper response)
@@ -85,53 +52,8 @@ public class AutentificationFilter implements Filter {
         if (debug) {
             log("AutentificationFilter:DoAfterProcessing");
         }
-
-        // Write code here to process the request and/or response after
-        // the rest of the filter chain is invoked.
-        // For example, a logging filter might log the attributes on the
-        // request object after the request has been processed. 
-        /*
-	for (Enumeration en = request.getAttributeNames(); en.hasMoreElements(); ) {
-	    String name = (String)en.nextElement();
-	    Object value = request.getAttribute(name);
-	    log("attribute: " + name + "=" + value.toString());
-
-	}
-         */
-        // For example, a filter might append something to the response.
-        /*
-	PrintWriter respOut = new PrintWriter(response.getWriter());
-	respOut.println("<p><strong>This has been appended by an intrusive filter.</strong></p>");
-	
-	respOut.println("<p>Params (after the filter chain):<br>");
-	for (Enumeration en = request.getParameterNames(); en.hasMoreElements(); ) {
-		String name = (String)en.nextElement();
-		String values[] = request.getParameterValues(name);
-		int n = values.length;
-		StringBuffer buf = new StringBuffer();
-		buf.append(name);
-		buf.append("=");
-		for(int i=0; i < n; i++) {
-		    buf.append(values[i]);
-		    if (i < n-1)
-			buf.append(",");
-		}
-		log(buf.toString());
-		respOut.println(buf.toString() + "<br>");
-	}
-        respOut.println("</p>");
-         */
     }
 
-    /**
-     *
-     * @param request The servlet request we are processing
-     * @param response The servlet response we are creating
-     * @param chain The filter chain we are processing
-     *
-     * @exception IOException if an input/output error occurs
-     * @exception ServletException if a servlet error occurs
-     */
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
@@ -167,9 +89,6 @@ public class AutentificationFilter implements Filter {
 
         Throwable problem = null;
         doAfterProcessing(wrappedRequest, wrappedResponse);
-
-        // If there was a problem, we want to rethrow it if it is
-        // a known type, otherwise log it.
         if (problem != null) {
             if (problem instanceof ServletException) {
                 throw (ServletException) problem;
@@ -181,31 +100,17 @@ public class AutentificationFilter implements Filter {
         }
     }
 
-    /**
-     * Return the filter configuration object for this filter.
-     */
     public FilterConfig getFilterConfig() {
         return (this.filterConfig);
     }
 
-    /**
-     * Set the filter configuration object for this filter.
-     *
-     * @param filterConfig The filter configuration object
-     */
     public void setFilterConfig(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
     }
 
-    /**
-     * Destroy method for this filter
-     */
     public void destroy() {
     }
 
-    /**
-     * Init method for this filter
-     */
     public void init(FilterConfig filterConfig) {
         this.filterConfig = filterConfig;
         if (filterConfig != null) {
@@ -214,10 +119,7 @@ public class AutentificationFilter implements Filter {
             }
         }
     }
-
-    /**
-     * Return a String representation of this object.
-     */
+    
     @Override
     public String toString() {
         if (filterConfig == null) {
@@ -278,22 +180,12 @@ public class AutentificationFilter implements Filter {
         filterConfig.getServletContext().log(msg);
     }
 
-    /**
-     * This request wrapper class extends the support class
-     * HttpServletRequestWrapper, which implements all the methods in the
-     * HttpServletRequest interface, as delegations to the wrapped request. You
-     * only need to override the methods that you need to change. You can get
-     * access to the wrapped request using the method getRequest()
-     */
     class RequestWrapper extends HttpServletRequestWrapper {
 
         public RequestWrapper(HttpServletRequest request) {
             super(request);
         }
-
-        // You might, for example, wish to add a setParameter() method. To do this
-        // you must also override the getParameter, getParameterValues, getParameterMap,
-        // and getParameterNames methods.
+        
         protected Hashtable localParams = null;
 
         public void setParameter(String name, String[] values) {
@@ -368,42 +260,10 @@ public class AutentificationFilter implements Filter {
         }
     }
 
-    /**
-     * This response wrapper class extends the support class
-     * HttpServletResponseWrapper, which implements all the methods in the
-     * HttpServletResponse interface, as delegations to the wrapped response.
-     * You only need to override the methods that you need to change. You can
-     * get access to the wrapped response using the method getResponse()
-     */
     class ResponseWrapper extends HttpServletResponseWrapper {
-
         public ResponseWrapper(HttpServletResponse response) {
             super(response);
         }
-
-        // You might, for example, wish to know what cookies were set on the response
-        // as it went throught the filter chain. Since HttpServletRequest doesn't
-        // have a get cookies method, we will need to store them locally as they
-        // are being set.
-        /*
-	protected Vector cookies = null;
-	
-	// Create a new method that doesn't exist in HttpServletResponse
-	public Enumeration getCookies() {
-		if (cookies == null)
-		    cookies = new Vector();
-		return cookies.elements();
-	}
-	
-	// Override this method from HttpServletResponse to keep track
-	// of cookies locally as well as in the wrapped response.
-	public void addCookie (Cookie cookie) {
-		if (cookies == null)
-		    cookies = new Vector();
-		cookies.add(cookie);
-		((HttpServletResponse)getResponse()).addCookie(cookie);
-	}
-         */
     }
 
 }

@@ -9,6 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="//db.onlinewebfonts.com/c/1273d9cc8e74f85a3e5dd1b732aa2b4c?family=Avenir+Next+Cyr" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="../styless.css">
         <title>Gestiune Page</title>
     </head>
@@ -265,11 +266,5 @@
 
 
 
-
-
-
-
-
-        <%@include file="common/footer.jspf"%>
     </body>
 </html>

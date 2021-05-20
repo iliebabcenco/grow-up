@@ -4,9 +4,9 @@ package domain;
 import java.util.Objects;
 
 public class Article {
-    int id;
-    String title;
-    String content;
+    private int id;
+    private String title;
+    private String content;
 
     public Article(int id, String title, String content) {
         this.id = id;
