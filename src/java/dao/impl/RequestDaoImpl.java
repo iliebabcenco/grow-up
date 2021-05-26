@@ -1,4 +1,3 @@
-
 package dao.impl;
 
 import dao.ObjectDaoIntf;
@@ -15,27 +14,27 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sql.DataSource;
 
-public class RequestDaoImpl implements ObjectDaoIntf<Request>{
+public class RequestDaoImpl implements ObjectDaoIntf<Request> {
 
     private static RequestDaoImpl instance;
     private DataSource ds;
+
     private RequestDaoImpl(DataSource ds) {
         this.ds = ds;
     }
+
     public static RequestDaoImpl getInstance(DataSource ds) {
         if (instance == null) {
             instance = new RequestDaoImpl(ds);
-        } 
+        }
         return instance;
     }
-    
-    
+
     @Override
     public void save(Request obj) {
         String sql = "INSERT into requests VALUES (null,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (Connection conn = ds.getConnection();
-                PreparedStatement ps = conn.prepareStatement(sql);
-                ) {
+                PreparedStatement ps = conn.prepareStatement(sql);) {
             ps.setString(1, obj.getName());
             ps.setString(2, obj.getSurename());
             ps.setString(3, obj.getIdnp());
@@ -62,9 +61,7 @@ public class RequestDaoImpl implements ObjectDaoIntf<Request>{
         try (
                 Connection conn = ds.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql);) {
-            
-           
-            
+
             ps.setString(1, obj.getName());
             ps.setString(2, obj.getSurename());
             ps.setString(3, obj.getIdnp());
@@ -84,7 +81,7 @@ public class RequestDaoImpl implements ObjectDaoIntf<Request>{
 
     @Override
     public void delete(Request obj) {
-    String sql = "DELETE FROM requests WHERE id=" + obj.getId();
+        String sql = "DELETE FROM requests WHERE id=" + obj.getId();
         try (
                 Connection conn = ds.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql);) {
@@ -104,9 +101,9 @@ public class RequestDaoImpl implements ObjectDaoIntf<Request>{
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                req = new Request(id, rs.getString(2), rs.getString(3), rs.getString(4), 
-                        rs.getDate(5), 
-                        rs.getString(6), rs.getString(7), rs.getInt(8), rs.getInt(9), 
+                req = new Request(id, rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getDate(5),
+                        rs.getString(6), rs.getString(7), rs.getInt(8), rs.getInt(9),
                         rs.getString(10), rs.getString(11), rs.getString(12));
             }
         } catch (SQLException ex) {
@@ -117,25 +114,25 @@ public class RequestDaoImpl implements ObjectDaoIntf<Request>{
 
     @Override
     public List<Request> findAll() {
-         List<Request> requests = new ArrayList<>();
+        List<Request> requests = new ArrayList<>();
         String sql = "SELECT * FROM requests";
         try (
                 Connection conn = ds.getConnection();
                 Statement smt = conn.createStatement();) {
-            
+
             ResultSet rs = smt.executeQuery(sql);
             while (rs.next()) {
-                
-                requests.add(new Request(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), 
-                        rs.getDate(5), 
-                        rs.getString(6), rs.getString(7), rs.getInt(8), 
-                        rs.getInt(9), rs.getString(10), rs.getString(11), 
-                        rs.getString(12), rs.getString(13), rs.getBytes(14))); //nu ar trebui
+
+                requests.add(new Request(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getDate(5),
+                        rs.getString(6), rs.getString(7), rs.getInt(8),
+                        rs.getInt(9), rs.getString(10), rs.getString(11),
+                        rs.getString(12), rs.getString(13), rs.getBytes(14)));
             }
         } catch (SQLException e) {
             Logger.getLogger(RequestDaoImpl.class.getName()).log(Level.SEVERE, null, e);
         }
         return requests;
     }
-    
+
 }

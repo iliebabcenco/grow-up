@@ -20,7 +20,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         reqService
-            = (RequestDaoJDBCImpl) getServletContext().getAttribute("reqService");
+                = (RequestDaoJDBCImpl) getServletContext().getAttribute("reqService");
         String action = request.getParameter("action");
         if (action == null) {
             arataLista(request, response);
@@ -83,16 +83,16 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
             path = "/WEB-INF/pages/error.jsp";
         }
         System.out.println("am trecut prin metoda saveOrUpdate");
-        
+
         request.getRequestDispatcher(path).forward(request, response);
     }
 
     private void deleteR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String strId = request.getParameter("reqId");
-        int id = Integer.parseInt(strId);
-        Request req = null;
+
         try {
-            req = (Request) reqService.findById(id);
+            int id = Integer.parseInt(strId);
+            Request req = (Request) reqService.findById(id);
             if (req != null) {
                 reqService.delete(req);
             }
@@ -118,6 +118,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         }
         request.getRequestDispatcher(path).forward(request, response);
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

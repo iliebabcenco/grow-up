@@ -80,8 +80,7 @@ public class GrowUserDaoImpl implements ObjectDaoIntf<GrowUser> {
         GrowUser gu = null;
         String sql = "SELECT * FROM growusers WHERE id=?";
         try (Connection conn = ds.getConnection();
-                PreparedStatement ps = conn.prepareStatement(sql);
-               ) {
+                PreparedStatement ps = conn.prepareStatement(sql);) {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -104,8 +103,7 @@ public class GrowUserDaoImpl implements ObjectDaoIntf<GrowUser> {
         GrowUser gu = null;
         String sql = "SELECT * FROM growusers WHERE username=?";
         try (Connection conn = ds.getConnection();
-                PreparedStatement ps = conn.prepareStatement(sql);
-               ) {
+                PreparedStatement ps = conn.prepareStatement(sql);) {
             ps.setString(1, username);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -128,23 +126,20 @@ public class GrowUserDaoImpl implements ObjectDaoIntf<GrowUser> {
     public List<GrowUser> findAll() {
         String sql = "SELECT * FROM growusers;";
         List<GrowUser> list = new ArrayList<>();
-         try (Connection conn = ds.getConnection();
-                PreparedStatement ps = conn.prepareStatement(sql);
-               ) {
-             ResultSet rs = ps.executeQuery();
-             while (rs.next()) {
-                 list.add(new GrowUser(rs.getInt(1), rs.getString(2), 
-                         rs.getString(3), rs.getString(4), 
-                         rs.getString(5), rs.getString(6),
-                 rs.getBoolean(7)));
-             }
-             
-             
-         } catch (SQLException ex) {
+        try (Connection conn = ds.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql);) {
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new GrowUser(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6),
+                        rs.getBoolean(7)));
+            }
+
+        } catch (SQLException ex) {
             Logger.getLogger(GrowUserDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
         return list;
     }
 
