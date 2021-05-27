@@ -54,10 +54,8 @@ public class executeregisteringserv extends HttpServlet {
         String term = request.getParameter("term");
         if (term.length() == 6) {
             req.setTerm(Integer.parseInt(term.substring(0, 1)));
-             System.out.println("TERMENUL SOLICITAT" + Integer.parseInt(term.substring(0, 2)));
         } else if (term.length() == 7) {
             req.setTerm(Integer.parseInt(term.substring(0, 2)));
-            System.out.println("TERMENUL SOLICITAT" + Integer.parseInt(term.substring(0, 2)));
         }
         
         req.setResidence(request.getParameter("domiciliu"));

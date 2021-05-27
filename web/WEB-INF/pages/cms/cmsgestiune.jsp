@@ -43,7 +43,7 @@
 
                     %> 
                     <tr>
-                        <td class="idTd"><%=art.getId()%> <% request.setAttribute("reqId", art.getId());%></td>
+                        <td class="idTd"><%=art.getId()%></td>
                         <td id="tdName"><%=art.getName()%></td>
                         <td><%=art.getSurename()%> </td>
                         <td><%=art.getIdnp()%></td>
@@ -70,7 +70,7 @@
                             <input class="myBtn" style="color: buttonshadow; border: none; background-color: white;" value="Edit" type="button">
                         </td>
                         <td>
-                            <a class="myBtn" href="cmsgestiune.jsp?reqId=<%=art.getId()%>">Edit</a>
+                            <a class="myBtn" href="cmsaddeditrequest?reqId=<%=art.getId()%>&action=saveOrUpdate">Edit</a>
                             <a  href="cmsRequestCRUDAllActions?reqId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
                     </tr>     
                     <% }%>

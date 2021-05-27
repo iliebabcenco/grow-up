@@ -72,7 +72,7 @@
                     <textarea cols="80" id="editor1" name="editor1" rows="10" ><%=artSelectat.getContent()%></textarea>
                 </p>
                 <ckeditor:replace replace="editor1" basePath="../ckeditor/"/>
-                
+
                 <div style="text-align: center;">
                     <input class="btnsolicita" type="submit" name="action" value="Adaugă/Modifică" />
                     <input class="btnsolicita" type="reset" name="reset" value="Resetează" />

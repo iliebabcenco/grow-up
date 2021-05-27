@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/src/java/dao/impl/RequestDaoImpl.java</file>
-            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/src/java/dao/impl/GrowUserDaoImpl.java</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/src/java/servlets/cms/cmsRequestCRUDAllActions.java</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/web/WEB-INF/pages/cms/cmsaddarticle.jsp</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/web/WEB-INF/pages/contacts.jsp</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/web/WEB-INF/pages/cms/cmsaddeditrequest.jsp</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/web/WEB-INF/pages/cms/cmsgestiune.jsp</file>
+            <file>file:/C:/Users/AveZomer/Desktop/Cursuri/Cursul%203%20Iucosoft/lectia%2014%20project%20grow/GrowUpProject/src/java/servlets/cms/cmsaddeditrequest.java</file>
         </group>
     </open-files>
 </project-private>

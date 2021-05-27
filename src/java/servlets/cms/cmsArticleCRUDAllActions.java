@@ -28,12 +28,6 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
-//            String title = request.getParameter("titletext");
-//            String content = request.getParameter("editor1");
-//            Article art = new Article();
-//            art.setTitle(title);
-//            art.setContent(content);
-//            artJdService.save(art);
             arataLista(request, response);
         } else {
             switch (action) {

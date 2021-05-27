@@ -10,85 +10,6 @@
         <link rel="stylesheet" type="text/css" href="styless.css">
         <title>Registering Page</title>
 
-        <script>
-            var validate = true;
-            function validateForm() {
-                document.getElementById("alerting").style.display = 'block';
-                var name, surename, idnp, dataNasterii, buliden, domiciliu, suma, term;
-                name = document.getElementsByName("name")[0].value;
-                surename = document.getElementsByName("surename")[0].value;
-                idnp = document.getElementsByName("idnp")[0].value;
-                dataNasterii = document.getElementsByName("dataNasterii")[0].value;
-                buliden = document.getElementsByName("buliden")[0].value;
-                domiciliu = document.getElementsByName("domiciliu")[0].value;
-                suma = document.getElementsByName("suma")[0].value;
-                term = document.getElementsByName("term")[0].value;
-                phone = document.getElementsByName("phone")[0].value;
-                document.getElementById("alerting").style.color = 'red';
-                validate = true;
-                if (phone === "") {
-                    text = "Introduceți telefonul mobil conform cerintelor";
-                    validate = false;
-                }
-                if (term === "") {
-                    text = "Introduceți termenul";
-                    validate = false;
-                }
-                if (suma === "") {
-                    text = "Introduceți suma";
-                    validate = false;
-                }
-                if (domiciliu === "") {
-                    text = "Introduceți seria și numărul buletinului de identitate";
-                    validate = false;
-                }
-                if (buliden === "") {
-                    text = "Introduceți seria și numărul buletinului de identitate";
-                    validate = false;
-                }
-                if (dataNasterii === "") {
-                    text = "Introduceți data nașterii";
-                    validate = false;
-                } else if (new Date(dataNasterii) < new Date('01/01/1960') || new Date(dataNasterii) > new Date('01/01/2000')) {
-                    if (new Date(dataNasterii) < new Date('01/01/1960'))
-                        text = "Cu părere de rău nu acordăm credite pensionarilor";
-                    else if (new Date(dataNasterii) > new Date('01/01/2000'))
-                        text = "Cu părere de rău nu ați atins vârsta eligibilă pentru a beneficia de credit";
-                    validate = false;
-                }
-                if (idnp.length !== 13 || isNaN(idnp) || idnp === "") {
-                    text = "Introduceți IDNP format din 13 cifre";
-                    validate = false;
-                }
-                if (surename === "" || surename.length < 2) {
-                    text = "Introduceți prenumele";
-                    validate = false;
-                }
-                if (name === "" || name.length < 2) {
-                    text = "Introduceți numele";
-                    validate = false;
-                }
-                //                
-//                if (validate === true) {
-//
-//                    text = "Cererea dvs. a fost validată cu succes, în cel mai scurt timp veți fi contactat.";
-//                    document.getElementById("alerting").style.color = 'green';
-//                }
-                document.getElementById("alerting").innerHTML = text;
-                return validate;
-            }
-            function clickedButton() {
-                if (validate == true) {
-                    document.getElementById("alerting").style.display = 'block';
-                    document.getElementById("alerting").style.color = 'green';
-                }
-
-            }
-
-        </script>
-
-
-
     </head>
     <body style="background-image: url(images/bani.jpg); background-attachment: fixed;">
 
@@ -203,5 +124,6 @@
 
 
         <%@include file="common/footer.jspf"%>
+        <script src="../../jsscript.js"></script>
     </body>
 </html>
