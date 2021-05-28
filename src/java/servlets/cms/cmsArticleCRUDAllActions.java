@@ -31,7 +31,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
             arataLista(request, response);
         } else {
             switch (action) {
-                case "Adaugă/Modifică":
+                case "AmSChimbatValoarea":
                     saveOrUpdateC(request, response);
                     break;
                 case "delete":

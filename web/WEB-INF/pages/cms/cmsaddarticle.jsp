@@ -43,7 +43,7 @@
 
                     %> 
                     <tr>
-                        <td><%=art.getId()%> <% request.setAttribute("reqId", art.getId());%></td>
+                        <td><%=art.getId()%>%></td>
                         <td><%=art.getTitle()%></td>
                         <td>
                             <a href="cmsArticleCRUDAllActions?artId=<%=art.getId()%>&action=edit" style="color: buttonshadow">Edit</a></td>
@@ -74,7 +74,7 @@
                 <ckeditor:replace replace="editor1" basePath="../ckeditor/"/>
 
                 <div style="text-align: center;">
-                    <input class="btnsolicita" type="submit" name="action" value="Adaugă/Modifică" />
+                    <input class="btnsolicita" type="submit" name="action" value="Save" />
                     <input class="btnsolicita" type="reset" name="reset" value="Resetează" />
                 </div>
             </form>

@@ -67,11 +67,11 @@
                             %>
                         </td>
                         <td>
-                            <input class="myBtn" style="color: buttonshadow; border: none; background-color: white;" value="Edit" type="button">
+                            <a class="myBtn" href="cmsaddeditrequest?reqId=<%=art.getId()%>">Edit</a>
                         </td>
                         <td>
-                            <a class="myBtn" href="cmsaddeditrequest?reqId=<%=art.getId()%>&action=saveOrUpdate">Edit</a>
-                            <a  href="cmsRequestCRUDAllActions?reqId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
+                            
+                            <a href="delete-request?reqId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
                     </tr>     
                     <% }%>
                 </tbody>

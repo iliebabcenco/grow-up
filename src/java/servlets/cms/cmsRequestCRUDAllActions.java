@@ -1,15 +1,8 @@
 package servlets.cms;
 
 import domain.Request;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.sql.Date;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -20,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import services.impl.jdbc.RequestDaoJDBCImpl;
 
-@WebServlet(name = "cmsRequestCRUDAllActions", urlPatterns = {"/cms/cmsRequestCRUDAllActions"})
+@WebServlet(name = "cmsRequestCRUDAllActions", urlPatterns = {"/cms/delete-request", "/cms/save-request"})
 public class cmsRequestCRUDAllActions extends HttpServlet {
 
     RequestDaoJDBCImpl reqService = null;
@@ -32,12 +25,12 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         reqService
                 = (RequestDaoJDBCImpl) getServletContext().getAttribute("reqService");
         String action = request.getParameter("action");
-        System.out.println("All Actions Servlet with action = "+action);
+        System.out.println("All Actions Req Servlet with action = "+action);
         if (action == null) {
             arataLista(request, response);
         } else {
             switch (action) {
-                case "saveOrUpdate":
+                case "Save":
                     saveOrUpdateR(request, response);
                     break;
                 case "delete":
@@ -76,64 +69,16 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
             req.setMail(request.getParameter("e-mail"));
             req.setPhone(request.getParameter("phone"));
             String summ = request.getParameter("suma");
-            if (summ.length() == 8) {
-                req.setSum(Integer.parseInt(summ.substring(0, 4)));
-            } else if (summ.length() == 9) {
-                req.setSum(Integer.parseInt(summ.substring(0, 5)));
-            } else if (summ.length() == 10) {
-                req.setSum(Integer.parseInt(summ.substring(0, 6)));
-            }
+            req.setSum(Integer.parseInt(summ));
             String term = request.getParameter("term");
+            req.setTerm(Integer.parseInt(term));
             if (term.length() == 6) {
                 req.setTerm(Integer.parseInt(term.substring(0, 1)));
             } else if (term.length() == 7) {
                 req.setTerm(Integer.parseInt(term.substring(0, 2)));
             }
             req.setResidence(request.getParameter("domiciliu"));
-            FileInputStream fileIS = null;
-            final String filePath = request.getServletContext().getRealPath("/") + "userfiles";
-            final Part filePart = request.getPart("myfile");
-            final String fileName = getFileName(filePart);
-            if (filePart != null) {
-                OutputStream out = null;
-                InputStream filecontent = null;
-                File fileDest = new File(path + File.separator + fileName);
-                try {
-                    out = new FileOutputStream(new File(path + File.separator
-                            + fileName));
-                    filecontent = filePart.getInputStream();
-
-                    int read = 0;
-                    final byte[] bytes = new byte[1024];
-
-                    while ((read = filecontent.read(bytes)) != -1) {
-                        out.write(bytes, 0, read);
-                    }
-                    fileIS = new FileInputStream(fileDest);
-                    long size = fileDest.length();
-                    byte[] fileData = new byte[(int) size];
-
-                    fileIS.read(fileData);
-
-                    req.setFileName(fileName);
-                    req.setFileData(fileData);
-
-                } catch (FileNotFoundException fne) {
-                    fne.printStackTrace();
-                } finally {
-                    if (out != null) {
-                        out.close();
-                    }
-                    if (filecontent != null) {
-                        filecontent.close();
-                    }
-                    if (fileIS != null) {
-                        fileIS.close();
-                    }
-                }
-            }
-            request.setAttribute("filename", fileName);
-
+            
             if (request.getParameter("reqId").equals("0") || request.getParameter("reqId") == null) {
                 reqService.save(req);
                 request.setAttribute("message", "The request has been successfuly saved!");
@@ -147,8 +92,6 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
                     foundReq.setName(req.getName());
                     foundReq.setBirthday(req.getBirthday());
                     foundReq.setCard_id(req.getCard_id());
-                    foundReq.setFileData(req.getFileData());
-                    foundReq.setFileName(req.getFileName());
                     foundReq.setIdnp(req.getIdnp());
                     foundReq.setIncome(req.getIncome());
                     foundReq.setMail(req.getMail());
@@ -199,16 +142,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         request.getRequestDispatcher(path).forward(request, response);
     }
 
-    private String getFileName(final Part part) {
-        final String partHeader = part.getHeader("content-disposition");
-        for (String content : part.getHeader("content-disposition").split(";")) {
-            if (content.trim().startsWith("filename")) {
-                return content.substring(
-                        content.indexOf('=') + 1).trim().replace("\"", "");
-            }
-        }
-        return null;
-    }
+ 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

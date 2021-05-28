@@ -18,12 +18,15 @@
             <% Request req = (Request) request.getAttribute("selectedRequest");
                 String date = new SimpleDateFormat("yyyy-MM-dd").format(req.getBirthday());
             %>
-            <form action="cmsRequestCRUDAllActions" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data" >
+            <form action="../cms/save-request" method="POST" onsubmit="return validateForm()" >
                 <h3 style="text-align: center;">Introduceți datele:</h3>
                 <table style="padding: 5px; margin: 20px auto;">
                     <tr>
                         <td>Numele: </td>
-                        <td><input type="text" name="name" lang="en" value="<%= req.getName()%>" size="20"/></td>
+                        <td>
+                            <input type="hidden" name="reqId" value="<%= req.getId()%>"/>
+                            <input type="text" name="name" lang="en" value="<%= req.getName()%>" size="20"/>
+                        </td>
                     </tr>
                     <tr>
                         <td>Prenumele: </td>
@@ -52,11 +55,11 @@
                     </tr>
                     <tr>
                         <td>Termen(luni): </td>
-                        <td><input id="termregistr" type="text" name="term" value="<%= req.getTerm() %>" size="20"/></td>
+                        <td><input id="termregistr" type="text" name="term" value="<%= req.getTerm()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td style="text-align: left">E-mail: </td>
-                        <td><input type="email" name="e-mail" value="<%= req.getMail() %>" size="20" placeholder="name@xxx.xxx"/></td>
+                        <td><input type="email" name="e-mail" value="<%= req.getMail()%>" size="20" placeholder="name@xxx.xxx"/></td>
                     </tr>
                     <tr>
                         <td style="text-align: left">Telefon mobil: </td>
@@ -67,40 +70,41 @@
                         <td>
                             <label class="containervenituri">1000-3000
                                 <input type="radio" name="radio" value="1000-3000" accept=""
-                                       <% if(req.getIncome().equals("1000-3000"))
-                                            out.print("checked=\"checked\"");
+                                       <% if (req.getIncome().equals("1000-3000")) {
+                                               out.print("checked=\"checked\"");
+                                           }
                                        %>>
                                 <span class="checkmark"></span>
                             </label>
                             <label class="containervenituri">3001-7000
                                 <input type="radio" name="radio" value="3001-7000"
-                                       <% if(req.getIncome().equals("3001-7000"))
-                                            out.print("checked=\"checked\"");
+                                       <% if (req.getIncome().equals("3001-7000")) {
+                                               out.print("checked=\"checked\"");
+                                           }
                                        %>>
                                 <span class="checkmark"></span>
                             </label>
                             <label class="containervenituri">7001-10000
-                                <input type="radio" name="radio" value="7001-10000"<% if(req.getIncome().equals("7001-10000"))
-                                            out.print("checked=\"checked\"");
+                                <input type="radio" name="radio" value="7001-10000"<% if (req.getIncome().equals("7001-10000")) {
+                                        out.print("checked=\"checked\"");
+                                    }
                                        %>>
                                 <span class="checkmark"></span>
                             </label>
                             <label class="containervenituri">10000+
                                 <input type="radio" name="radio" value="10000+" 
-                                       <% if(req.getIncome().equals("10000+"))
-                                            out.print("checked=\"checked\"");
+                                       <% if (req.getIncome().equals("10000+")) {
+                                               out.print("checked=\"checked\"");
+                                           }
                                        %>>
                                 <span class="checkmark"></span>
                             </label>
                         </td>
                     </tr>
-                    <tr>
-                        <td><label for="myfile">Încarcă buletin <br>de identitate:</label></td>
-                        <td ><input type="file" id="myfile" name="myfile" style="font-size: 10px;"></td>
-                    </tr>
+
                 </table>
                 <div style="text-align: center;">
-                    <input class="btnsolicita" onclick="clickedButton()" type="submit" name="action" value="Salvează">
+                    <input class="btnsolicita" onclick="clickedButton()" type="submit" name="action" value="Save"/>
                     <a class="btnsolicita" href="cmsgestiuneserv" style="text-align: center; padding: 1rem;">Înapoi</a>
                 </div>
             </form>
@@ -114,7 +118,6 @@
             </h3>
         </div>
 
-        <script src="../../jsscript.js"></script>
-
+            <script src="../../../jsscript.js"></script>
     </body>
 </html>
