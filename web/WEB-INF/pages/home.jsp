@@ -1,9 +1,3 @@
-<%-- 
-    Document   : home.jsp
-    Created on : Aug 29, 2020, 7:59:48 AM
-    Author     : AveZomer
---%>
-
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
@@ -13,17 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styless.css">
         <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+        <link rel="stylesheet" href="resp.css"/>
         <script type="text/javascript" src="jsscript.js"></script>
     <body>
-        <div id="mainContent" class="col-3 col-s-12">
+        <div id="mainContent">
             <%@include file="common/header.jspf" %>
             <div id="promo">
                 <div id="active">
                     <p style="margin-left: 15px">20 de ani de succes! <br>
                         Echipa Grow Up
-
                     </p>
-
                 </div>
                 <div id="slidecontainer">
                     <form method="POST" action="registering.html">
@@ -50,7 +43,6 @@
 
 
                         <input class="btnsolicita" type="submit" name="action" value="Solicită acum" style="margin-left: 30%;">
-                        <!--                        <div id="btnSolicita"><a href="registering.html" >Solicită acum</a></div>-->
                     </form>
                 </div>
 

@@ -118,3 +118,13 @@ function validateForm() {
     return validate;
 }
 
+const clickNavMenu = () => {
+    const logoHref = document.getElementById("logohref");
+    const navPart = document.querySelector('.nav-part');
+    if (navPart.style.display === 'flex') {
+        navPart.style.display = 'none'
+    } else {
+        navPart.style.display = 'flex'
+    }
+}
+

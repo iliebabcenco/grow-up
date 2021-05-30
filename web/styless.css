@@ -7,10 +7,9 @@ body {
     font-family: "Avenir Next Cyr";
     padding: 0px;
     margin: 0px;
-
 }
 
-#menu {
+/*#menu {
     width: 100%;
     background-color: white;
     font-family: "Avenir Next Cyr";
@@ -21,21 +20,12 @@ body {
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
 
-}
-#menu ul {
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style-type: none;
-    line-height: 75px;
-}
-#menu li {
+}*/
+
+.menuItem {
     margin-right: 15px;
     margin-left: 20px; 
-    display: block;
     font-weight: bold;
-
 }
 
 
@@ -72,8 +62,6 @@ body {
 a {
     color: #003366;	
     text-decoration: none;
-    font-size: 19px;
-
 }
 #menu a:hover, #menu a:active, #cmsgestdiv a:hover{
     text-decoration: none;
@@ -87,14 +75,11 @@ a {
     transition-property: background-color, color;
     transition: 0.5s;
 }
-#logohref{
-    margin-top: 15px;
-}
+
 #logo {
     color: #003366;
     font-family: "Brush Script MT", "Brush Script Std", cursive;
     font-size: 36px;
-    margin: 15px;
     align-self: center;
     transition: 1s;
 }
@@ -375,7 +360,7 @@ input {
     border-radius: 10px;
     margin: 15px auto;
 }
-#goCont, #goNext {
+.sign-div, #goNext {
     height: 25px;
     width: 150px;
     text-align: center;
@@ -388,7 +373,7 @@ input {
     display: block;
 }
 
-#btnSolicita:hover, #goCont:hover, #goNext:hover{
+#btnSolicita:hover, .sign-div:hover, #goNext:hover{
     color: #003366;
     -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
@@ -396,7 +381,7 @@ input {
     transition: 0.5s;
     display: block;
 }
-#goCont:hover a{
+.sign-div:hover a{
     color: #003366;
 }
 #content1 {
@@ -610,114 +595,3 @@ hr{
 .closebtn:hover {
     color: black;
 }
-
-/*incercam responsive*/
-
-/** {
-  box-sizing: border-box;
-}
- For mobile phones: 
-[class*="collapsible-"] {
-  width: 100%;
-}
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-@media only screen and (min-width: 600px) {
-   For tablets: 
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-   For desktop: 
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}*/
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    -webkit-animation-name: fadeIn; /* Fade in the background */
-    -webkit-animation-duration: 0.4s;
-    animation-name: fadeIn;
-    animation-duration: 0.4s
-
-}
-.modal-content {
-    padding: 2%;
-    position: fixed;
-    margin: 0px auto;
-    border-radius: 10px;
-    left: 37%;
-    top: 10%;
-    background-color: #fefefe;
-    width: 25%;
-    -webkit-animation-name: slideIn;
-    -webkit-animation-duration: 0.4s;
-    animation-name: slideIn;
-    animation-duration: 0.4s
-}
-
-/* The Close Button */
-.close {
-    color: gray;
-    float: right;
-    margin-right: 2%;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* Add Animation */
-@-webkit-keyframes slideIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-}
-
-@keyframes slideIn {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
-
