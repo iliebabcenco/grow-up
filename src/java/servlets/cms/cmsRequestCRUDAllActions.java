@@ -3,6 +3,7 @@ package servlets.cms;
 import domain.Request;
 import java.io.IOException;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -36,7 +37,10 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
                     deleteR(request, response);
                     break;
                 case "edit":
-                    editR(request, response);
+                    openEditNew(request, response);
+                    break;
+                case "open":
+                    openEditNew(request, response);
                     break;
                 default:
                     arataLista(request, response);
@@ -127,33 +131,21 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         request.getRequestDispatcher("cmsgestiuneserv").forward(request, response);
     }
 
-//    private void editR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String path = "";
-//        String idStr = request.getParameter("reqId");
-//        int id = Integer.parseInt(idStr);
-//        try {
-//            Request req = (Request) reqService.findById(id);
-//            
-//            request.setAttribute("reqSelectat", req);
-//            path = "requests";
-//        } catch (Exception ex) {
-//            path = "/WEB-INF/pages/error.jsp";
-//        }
-//        request.getRequestDispatcher(path).forward(request, response);
-//    }
-    private void editR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void openEditNew(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("reqId");
         String path = "";
         int reqId = 0;
         try {
             reqId = Integer.parseInt(id);
+            System.out.println("reqId= "+reqId);
         } catch (NumberFormatException e) {
             path = "/WEB-INF/pages/error.jsp";
         }
         Request req = reqService.findById(reqId);
         if (req == null) {
-            req = new Request();
+            req = new Request(0, "", "", "", Date.valueOf(LocalDate.MIN), "", "", 0, 0, "", "", "");
         }
+        System.out.println("Request =  "+req);
         path = "/WEB-INF/pages/cms/cmsaddeditrequest.jsp";
         request.setAttribute("selectedRequest", req);
         request.getRequestDispatcher(path).forward(request, response);
