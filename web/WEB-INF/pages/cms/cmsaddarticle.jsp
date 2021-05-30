@@ -43,7 +43,7 @@
 
                     %> 
                     <tr>
-                        <td><%=art.getId()%>%></td>
+                        <td><%=art.getId()%></td>
                         <td><%=art.getTitle()%></td>
                         <td>
                             <a href="cmsArticleCRUDAllActions?artId=<%=art.getId()%>&action=edit" style="color: buttonshadow">Edit</a></td>

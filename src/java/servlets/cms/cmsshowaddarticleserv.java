@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import services.impl.jdbc.ArticleJDBCImpl;
 
-@WebServlet(name = "cmsshowaddarticleserv", urlPatterns = {"/cms/cmsshowaddarticleserv"})
+@WebServlet(name = "cmsshowaddarticleserv", urlPatterns = {"/cms/news"})
 public class cmsshowaddarticleserv extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

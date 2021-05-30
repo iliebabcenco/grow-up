@@ -31,7 +31,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
             arataLista(request, response);
         } else {
             switch (action) {
-                case "AmSChimbatValoarea":
+                case "Save":
                     saveOrUpdateC(request, response);
                     break;
                 case "delete":
@@ -108,7 +108,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
                     artJdService.update(articolDinService);
                 }
             }
-            path = "cmsshowaddarticleserv";
+            path = "news";
         } catch (Exception ex) {
             ex.printStackTrace();
             path = "/WEB-INF/pages/error.jsp";
@@ -143,7 +143,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(cmsArticleCRUDAllActions.class.getName()).log(Level.SEVERE, null, ex);
         }
-        request.getRequestDispatcher("cmsshowaddarticleserv").forward(request, response);
+        request.getRequestDispatcher("news").forward(request, response);
     }
 
     private void editArt(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -153,7 +153,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
         try {
             Article art = (Article) artJdService.findById(id);
             request.setAttribute("articolSelectat", art);
-            path = "cmsshowaddarticleserv";
+            path = "news";
         } catch (Exception ex) {
             path = "/WEB-INF/pages/error.jsp";
         }

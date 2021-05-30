@@ -4,7 +4,7 @@
         <li><a href="../home.html">Main Page</a></li>
         <li><a href="../news.html">Verifică noutăți</a></li>
         <li><a href="requests">Solicitări</a></li>
-        <li><a href="cmsshowaddarticleserv">Articole</a></li>
+        <li><a href="news">Articole</a></li>
         <li><a href="save-request?action=open">Adaugă cerere nouă</a></li>
     </ul>
     <div id="btnSolicita"><a href="cmslogoutserv">Log Out</a></div>
