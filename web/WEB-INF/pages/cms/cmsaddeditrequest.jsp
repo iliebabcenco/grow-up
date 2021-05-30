@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../styless.css">
         <link href="//db.onlinewebfonts.com/c/1273d9cc8e74f85a3e5dd1b732aa2b4c?family=Avenir+Next+Cyr" rel="stylesheet" type="text/css"/>
-        <title>Changing Page</title>
+        <title>Add/Edit a request</title>
     </head>
     <body style="background-image: url(../images/bani.jpg); background-attachment: fixed;">
 
@@ -104,8 +104,8 @@
 
                 </table>
                 <div style="text-align: center;">
-                    <input class="btnsolicita" onclick="clickedButton()" type="submit" name="action" value="Save"/>
-                    <a class="btnsolicita" href="cmsgestiuneserv" style="text-align: center; padding: 1rem;">Înapoi</a>
+                    <input class="btnsolicita" onclick="" type="submit" name="action" value="Save"/>
+                    <a class="btnsolicita" href="requests" style="text-align: center; padding: 1rem;">Înapoi</a>
                 </div>
             </form>
             <h3 id="alerting" style="color:green; display: block; text-align: center;">
@@ -118,6 +118,6 @@
             </h3>
         </div>
 
-            <script src="../../../jsscript.js"></script>
+            <script src="../jsscript.js"></script>
     </body>
 </html>

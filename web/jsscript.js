@@ -117,13 +117,4 @@ function validateForm() {
     document.getElementById("alerting").innerHTML = text;
     return validate;
 }
-function clickedButton() {
-    if (validate == true) {
-        document.getElementById("alerting").style.display = 'block';
-        document.getElementById("alerting").style.color = 'green';
-    }
-
-}
-
-
 

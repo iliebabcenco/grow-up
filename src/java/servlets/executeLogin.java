@@ -44,7 +44,7 @@ public class executeLogin extends HttpServlet {
             HttpSession session = request.getSession(true);
             user.setPassword("");
             session.setAttribute("MAINUSER", user);
-            response.sendRedirect("cms/cmsgestiuneserv");
+            response.sendRedirect("cms/requests");
         } catch (Exception ex) {
             String path = "/WEB-INF/pages/login.jsp";
             request.setAttribute("loginerror", "Ați introdus login sau parolă greșită!");

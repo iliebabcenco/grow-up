@@ -67,7 +67,7 @@
                             %>
                         </td>
                         <td>
-                            <a class="myBtn" href="cmsaddeditrequest?reqId=<%=art.getId()%>">Edit</a>
+                            <a class="myBtn" href="edit-request?reqId=<%=art.getId()%>&action=edit">Edit</a>
                         </td>
                         <td>
                             

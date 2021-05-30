@@ -10,10 +10,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 import services.impl.jdbc.RequestDaoJDBCImpl;
 
-@WebServlet(name = "cmsRequestCRUDAllActions", urlPatterns = {"/cms/delete-request", "/cms/save-request"})
+@WebServlet(name = "cmsRequestCRUDAllActions", urlPatterns = {"/cms/delete-request", "/cms/save-request", "/cms/edit-request"})
 public class cmsRequestCRUDAllActions extends HttpServlet {
 
     RequestDaoJDBCImpl reqService = null;
@@ -104,7 +103,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
                     request.setAttribute("message", "The request has been successfuly updated!");
                 }
             }
-            path = "cmsgestiuneserv";
+            path = "requests";
         } catch (Exception ex) {
             ex.printStackTrace();
             path = "/WEB-INF/pages/error.jsp";
@@ -128,17 +127,35 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         request.getRequestDispatcher("cmsgestiuneserv").forward(request, response);
     }
 
+//    private void editR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        String path = "";
+//        String idStr = request.getParameter("reqId");
+//        int id = Integer.parseInt(idStr);
+//        try {
+//            Request req = (Request) reqService.findById(id);
+//            
+//            request.setAttribute("reqSelectat", req);
+//            path = "requests";
+//        } catch (Exception ex) {
+//            path = "/WEB-INF/pages/error.jsp";
+//        }
+//        request.getRequestDispatcher(path).forward(request, response);
+//    }
     private void editR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("reqId");
         String path = "";
-        String idStr = request.getParameter("reqId");
-        int id = Integer.parseInt(idStr);
+        int reqId = 0;
         try {
-            Request art = (Request) reqService.findById(id);
-            request.setAttribute("reqSelectat", art);
-            path = "cmsgestiuneserv";
-        } catch (Exception ex) {
+            reqId = Integer.parseInt(id);
+        } catch (NumberFormatException e) {
             path = "/WEB-INF/pages/error.jsp";
         }
+        Request req = reqService.findById(reqId);
+        if (req == null) {
+            req = new Request();
+        }
+        path = "/WEB-INF/pages/cms/cmsaddeditrequest.jsp";
+        request.setAttribute("selectedRequest", req);
         request.getRequestDispatcher(path).forward(request, response);
     }
 

@@ -19,15 +19,15 @@
         
         <%  
         String path = "login.html";
+        String name = "Sign In";
         HttpSession currentSession = request.getSession(false);
         
         if (currentSession.getAttribute("MAINUSER") != null) {
-            path = "cms/cmsgestiuneserv";
-        }
+            path = "cms/requests";
+            name = "All requests"; %>
+        <% } %>
+        <a href="<%= path %>"><%= name %></a>
 
-        %>
-        <a href="<%= path %>">Intră în cont</a>
-    
     
     </div>
 </div>

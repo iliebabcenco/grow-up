@@ -24,7 +24,7 @@ public class cmsaddeditrequest extends HttpServlet {
         try {
             reqId = Integer.parseInt(id);
         } catch (NumberFormatException e) {
-            System.out.println("ID incorect");
+            throw new NumberFormatException("ID incorect");
         }
         Request req = requestService.findById(reqId);
         if (req == null) {
