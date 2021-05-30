@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import services.impl.jdbc.ArticleJDBCImpl;
 
-@WebServlet(name = "cmsArticleCRUDAllActions", urlPatterns = {"/cms/cmsArticleCRUDAllActions"})
+@WebServlet(name = "cmsArticleCRUDAllActions", urlPatterns = {"/cms/news-actions"})
 public class cmsArticleCRUDAllActions extends HttpServlet {
 
     private final static Logger LOGGER = Logger.getLogger(cmsArticleCRUDAllActions.class.getCanonicalName());

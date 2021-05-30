@@ -47,13 +47,13 @@
                             <p>Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p><br>
                         </div>
                         <div style="clear: both;"></div>
-                        
-                        
-                         <input class="btnsolicita" type="submit" name="action" value="Solicită acum" style="margin-left: 30%;">
-<!--                        <div id="btnSolicita"><a href="registering.html" >Solicită acum</a></div>-->
+
+
+                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum" style="margin-left: 30%;">
+                        <!--                        <div id="btnSolicita"><a href="registering.html" >Solicită acum</a></div>-->
                     </form>
                 </div>
-                
+
             </div>
             <div style="clear: both;"></div>
 

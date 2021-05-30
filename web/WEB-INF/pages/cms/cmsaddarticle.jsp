@@ -40,23 +40,21 @@
                 <tbody>
                     <%
                         for (Article art : listaDeArticole) {
-
                     %> 
                     <tr>
                         <td><%=art.getId()%></td>
                         <td><%=art.getTitle()%></td>
                         <td>
-                            <a href="cmsArticleCRUDAllActions?artId=<%=art.getId()%>&action=edit" style="color: buttonshadow">Edit</a></td>
+                            <a href="news-actions?artId=<%=art.getId()%>&action=edit" style="color: buttonshadow">Edit</a></td>
                         <td>
-                            <a href="cmsArticleCRUDAllActions?artId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
+                            <a href="news-actions?artId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
                     </tr>     
-                    <%                        }
+                    <% }%>       
 
-                    %>        
 
                 </tbody>
             </table>
-            <form action="cmsArticleCRUDAllActions" method="POST" style="align-content: center;">
+            <form action="news-actions" method="POST" style="align-content: center;">
                 <p style="display: none;">
                     <label for="idtext">ID:</label>
                     <br>
