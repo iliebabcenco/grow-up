@@ -15,9 +15,7 @@ public class cmsgestiuneserv extends HttpServlet {
             throws ServletException, IOException {
         RequestDaoJDBCImpl reqService
                 = (RequestDaoJDBCImpl) getServletContext().getAttribute("reqService");
-
         request.setAttribute("listaCererilor", reqService.findAll());
-
         request.getRequestDispatcher("/WEB-INF/pages/cms/cmsgestiune.jsp").forward(request, response);
     }
 

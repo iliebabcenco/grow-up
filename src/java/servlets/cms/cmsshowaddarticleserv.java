@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets.cms;
 
 import domain.Article;
@@ -28,7 +23,7 @@ public class cmsshowaddarticleserv extends HttpServlet {
         if (art == null) {
             art = new Article(0, "", "");
         }
-         request.setAttribute("articolSelectat", art);
+        request.setAttribute("articolSelectat", art);
         request.getRequestDispatcher("/WEB-INF/pages/cms/cmsaddarticle.jsp").forward(request, response);
     }
 

@@ -23,29 +23,18 @@ public class cmslogoutserv extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String path = null; //variabila locala
-
         try {
             HttpSession session = request.getSession();
             if (session == null) {
                 throw new Exception("session is null");
             }
-//            String sesUser = (String) session.getAttribute("MAINUSER");
-//            if (sesUser == null) {
-//                throw new Exception("session is null");
-//            }
-            //daca am ajuns aici insamna ca sesiunea e activa
-            //pregatirea pentru iesire
-            //remove din sesiune tooate obiectele plasate acolo, distruge sesiune
-            session.invalidate(); // am distrus sesiunea
+            session.invalidate();
             session = null;
             path = "../home.html";
-            System.out.println("am ajuns la sfirstit de try din cms logout");
             response.sendRedirect(path);
-            //path = "/WEB-INF/pages/cms/cmsmainpage.jsp";
         } catch (Exception e) {
             path = "../login.html";
-            System.out.println("am intrat in eroare cms logout");
-           response.sendRedirect(path);
+            response.sendRedirect(path);
         }
 
     }

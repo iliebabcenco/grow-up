@@ -20,12 +20,10 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
+
         reqService
                 = (RequestDaoJDBCImpl) getServletContext().getAttribute("reqService");
         String action = request.getParameter("action");
-        System.out.println("All Actions Req Servlet with action = "+action);
         if (action == null) {
             arataLista(request, response);
         } else {
@@ -61,7 +59,6 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
     private void saveOrUpdateR(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = "";
         Request req = new Request();
-        System.out.println("we are in saveOrUpdate now with name = "+ request.getParameter("name"));
         try {
             req.setName(request.getParameter("name"));
             req.setSurename(request.getParameter("surename"));
@@ -81,7 +78,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
                 req.setTerm(Integer.parseInt(term.substring(0, 2)));
             }
             req.setResidence(request.getParameter("domiciliu"));
-            
+
             if (request.getParameter("reqId").equals("0") || request.getParameter("reqId") == null) {
                 reqService.save(req);
                 request.setAttribute("message", "The request has been successfuly saved!");
@@ -137,7 +134,6 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         int reqId = 0;
         try {
             reqId = Integer.parseInt(id);
-            System.out.println("reqId= "+reqId);
         } catch (NumberFormatException e) {
             path = "/WEB-INF/pages/error.jsp";
         }
@@ -145,13 +141,10 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         if (req == null) {
             req = new Request(0, "", "", "", Date.valueOf(LocalDate.MIN), "", "", 0, 0, "", "", "");
         }
-        System.out.println("Request =  "+req);
         path = "/WEB-INF/pages/cms/cmsaddeditrequest.jsp";
         request.setAttribute("selectedRequest", req);
         request.getRequestDispatcher(path).forward(request, response);
     }
-
- 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

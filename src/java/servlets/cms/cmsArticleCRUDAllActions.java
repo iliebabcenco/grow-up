@@ -39,7 +39,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
                     break;
                 case "edit":
                     editArt(request, response);
-                    
+
                     break;
                 default:
                     arataLista(request, response);
@@ -116,7 +116,7 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
         request.getRequestDispatcher(path).forward(request, response);
 
     }
-    
+
     private void arataLista(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = null;
 
@@ -152,7 +152,6 @@ public class cmsArticleCRUDAllActions extends HttpServlet {
         int id = Integer.parseInt(idStr);
         try {
             Article art = (Article) artJdService.findById(id);
-            System.out.println("a fost gasit articol prin edit: " + art.getTitle());
             request.setAttribute("articolSelectat", art);
             path = "cmsshowaddarticleserv";
         } catch (Exception ex) {
