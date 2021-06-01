@@ -1,18 +1,119 @@
 @media only screen and (min-width: 300px) {
+    #logo-item {
+        display: none;
+    }
     .nav-part {
         display: none;
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
     }
-    #menu {
+    .menu {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 2rem;
         box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        color: #003366;
     }
     .menuList {
         list-style-type: none;
+        margin-top: 1rem;
+        padding: 0;
+        text-align: center;
     }
+    .menuItem {
+        font-weight: bold;
+        border-bottom: 1px solid #003366;
+    }
+    .sign-div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .menuLink {
+        display: block;
+        padding: 1rem;
+    }
+    .special-link {
+        display: block;
+        padding: 1rem;
+        background-color: #FF8900;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    .contact-p {
+        margin: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #FF8900;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-part {
+        display: none;
+    }
+
+    .menuItem {
+        border: none;
+    }
+    .menuList {
+        display: flex;
+        justify-content: center;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .special-link {
+        width: 12em;
+        display: inline-block;
+    }
+    .sign-div {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .menuLink:hover, #logohref:hover  {
+        color: #FF8900;
+        transition: color 0.2s ease;
+    }
+    .special-link:hover {
+        box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        transition: box-shadow 0.3s ease;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    #logo-item {
+        display: block;
+    }
+    .nav-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .display-menuLink {
+        display: none;
+    }
+    .special-link {
+        width: 5rem;
+        display: inline;
+        
+    }
+    #top-logo {
+        display: none;
+    }
+    .logo {
+        padding-right: 2rem;
+    }
+    .menu {
+        padding: 0.5rem;
+    }
+    .contact-p {
+        margin-top: 2rem;
+    }
+    
 }

@@ -1,23 +1,24 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
 <script src="https://kit.fontawesome.com/1b3f199c8f.js" crossorigin="anonymous"></script>
-
-<div id="menu">
-    <div id="logo"><a id="logohref" href="home.html">Grow Up</a></div>
+<link rel="stylesheet" href="resp.css"/>
+<div class="menu">
+    <div id="top-logo" class="logo"><a id="logohref" href="home.html">Grow Up</a></div>
     <div class="nav-part-menu">
-        <a href="#" onclick="clickNavMenu()"><i class="fas fa-bars fa-2x"></i></a>
+        <a href="#" class="display-menuLink" onclick="clickNavMenu()"><i class="fas fa-bars fa-2x"></i></a>
     </div>
     <div class="nav-part">
         <ul class="menuList">
-            <li class="menuItem" ><a href="aboutus.html">Despre Grow Up</a></li>
-            <li class="menuItem"><a href="howobtain.html">Cum obțin</a></li>
-            <li class="menuItem"><a href="howrefund.html">Cum rambursez</a></li>
-            <li class="menuItem"><a href="answersquestions.html">Întrebări și răspunsuri</a></li>
-            <li class="menuItem"><a href="news.html">Noutăți</a></li>
-            <li class="menuItem"><a href="contacts.html">Contacte</a></li>
+            <li class="menuItem" id="logo-item"><div class="logo"><a id="logohref" href="home.html">Grow Up</a></div></li> 
+            <li class="menuItem"><a class="menuLink" href="aboutus.html">About Us</a></li>
+            <li class="menuItem"><a class="menuLink" href="howobtain.html">How to obtain</a></li>
+            <li class="menuItem"><a class="menuLink" href="howrefund.html">How to refund</a></li>
+            <li class="menuItem"><a class="menuLink" href="answersquestions.html">Q&A</a></li>
+            <li class="menuItem"><a class="menuLink" href="news.html">News</a></li>
+            <li class="menuItem"><a class="menuLink" href="contacts.html">Contacts</a></li>
         </ul>
-        <p class="contacterPar"> 022-22-22-22</p> <br>
-        <p class="contact-p">Contactează-ne</p>
+        <p class="contact-p">Contact Us</p>
+        <p class="contact-p"> 022-22-22-22</p>
         <div class="sign-div">
             <%
                 String path = "login.html";
@@ -26,11 +27,11 @@
 
                 if (currentSession.getAttribute("MAINUSER") != null) {
                     path = "cms/requests";
-                name = "All requests"; %>
+                    name = "All requests"; %>
             <% }%>
-            <a href="<%= path%>"><%= name%></a>
+            <a class="special-link" href="<%= path%>"><%= name%></a>
         </div>
     </div>
-    
+
 </div>
 <script src="jsscript.js"></script>

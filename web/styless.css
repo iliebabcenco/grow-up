@@ -22,11 +22,11 @@ body {
 
 }*/
 
-.menuItem {
+/*.menuItem {
     margin-right: 15px;
     margin-left: 20px; 
     font-weight: bold;
-}
+}*/
 
 
 .collapsible {
@@ -69,41 +69,25 @@ a {
     transition-property: background-color, color;
     transition: 0.5s;
 }
-#logo:hover {
+.logo:hover {
     text-decoration: none;
     color: #FF8900;
     transition-property: background-color, color;
     transition: 0.5s;
 }
 
-#logo {
+.logo {
     color: #003366;
     font-family: "Brush Script MT", "Brush Script Std", cursive;
     font-size: 36px;
-    align-self: center;
     transition: 1s;
 }
 
 #cont {
     align-self: center;
 }
-#contacterPar {
-    margin: 15px;
-    font-weight: bold;
-    font-size: 24px;
-    align-self: center;
-}
-#mainContent p {
-    display: block;
-    color: #003366;	
-    float: left;
-    align-self: center;
-}
-#menu p {
-    color: #003366;	
-    display: block;
-    align-self: center;
-}
+
+
 
 #promo {
     width: 70%;
@@ -113,8 +97,6 @@ a {
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
 }
-
-
 
 #registeringdiv, #logindiv, #cmsgestdiv {
     width: 50%;
@@ -360,7 +342,7 @@ input {
     border-radius: 10px;
     margin: 15px auto;
 }
-.sign-div, #goNext {
+/*.sign-div, #goNext {
     height: 25px;
     width: 150px;
     text-align: center;
@@ -371,9 +353,9 @@ input {
     padding: 10px;
     background-color: #FF8900;
     display: block;
-}
+}*/
 
-#btnSolicita:hover, .sign-div:hover, #goNext:hover{
+#btnSolicita:hover, #goNext:hover{
     color: #003366;
     -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
@@ -381,9 +363,9 @@ input {
     transition: 0.5s;
     display: block;
 }
-.sign-div:hover a{
+/*.sign-div:hover a{
     color: #003366;
-}
+}*/
 #content1 {
     margin: 15px auto;
     margin-bottom: 50px;

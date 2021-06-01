@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styless.css">
         <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
-        <link rel="stylesheet" href="resp.css"/>
+       
         <script type="text/javascript" src="jsscript.js"></script>
     <body>
         <div id="mainContent">
