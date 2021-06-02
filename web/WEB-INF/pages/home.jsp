@@ -7,58 +7,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styless.css">
         <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
-       
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <script type="text/javascript" src="jsscript.js"></script>
     <body>
-        <div id="mainContent">
+        <div class="mainContent">
             <%@include file="common/header.jspf" %>
-            <div id="promo">
-                <div id="active">
-                    <p style="margin-left: 15px">20 de ani de succes! <br>
+            <div class="promo">
+                <div class="pano">
+                    <p class="deviz">20 de ani de succes! <br>
                         Echipa Grow Up
                     </p>
                 </div>
-                <div id="slidecontainer">
+                <div class="slidecontainer">
                     <form method="POST" action="registering.html">
-                        <h1 style="margin-left: 20%;">Calculator sumă</h1>
-                        <p>Alege suma <input type="text" id="mySumField" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
+                        <h1 class="calc-title">Calculator sumă</h1>
+                        <p class="calc-details-p">Alege suma <input type="text" id="mySumField" class="form-control" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
 
                         <input id="mySumRange" type="range" step="1000" min="1000" max="100000" value="50000" class="slider" onchange="updateTextInput(this.value);">
 
-                        <div id="minMaxSumDiv"><p style="float: left;">min 1000 MDL</p> <p style="float: right; margin-right: 50px;">max 100000 MDL</p></div>
+                        <div class="minMaxDiv"><p>min 1000 MDL</p> <p>max 100000 MDL</p></div>
 
-                        <div style="clear: both;"></div>
-                        <p>Alege termenul <input type="text" value="12 luni" id="myTermField" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
+                        <p class="calc-details-p">Alege termenul <input type="text" value="12 luni" id="myTermField" class="form-control" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
 
                         <input type="range" min="1" max="60" value="12" class="slider" id="myTermRange" onchange="updateTextTermInput(this.value);">
-                        <div id="minMaxTermDiv"><p style="float: left;">1 lună</p> <p style="float: right; margin-right: 50px;">60 luni</p></div>
-                        <div style="clear: both;"></div>
-                        <div style="float: left; margin-top: 15px; margin-bottom: 10px;">
-                            <p>Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p><br>
-                            <p>Plata lunară: <span id="rambursareSum"> 0 MDL</span></p><br>
-                            <p>Costul total: <span id="solicitareCost"> 0 MDL</span></p><br>	
-                            <p>Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p><br>
+                        <div class="minMaxDiv"><p>1 lună</p> <p>60 luni</p></div>
+                        <div>
+                            <p class="sum-par">Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p><br>
+                            <p class="sum-par">Plata lunară: <span id="rambursareSum"> 0 MDL</span></p><br>
+                            <p class="sum-par">Costul total: <span id="solicitareCost"> 0 MDL</span></p><br>	
+                            <p class="sum-par">Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p><br>
                         </div>
-                        <div style="clear: both;"></div>
 
-
-                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum" style="margin-left: 30%;">
+                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum">
                     </form>
                 </div>
 
             </div>
-            <div style="clear: both;"></div>
 
-            <div id="content1">
+            <div class="ask-div">
 
                 <h2>Vezi care sunt șansele să obții un </h2>
                 <h1>credit online!</h1>
-                <div id="goNext"><a href="registering.html" style="margin: 0px;">Să începem!</a></div>
+                <div class="special-link"><a href="registering.html">Să începem!</a></div>
                 <h1>Alege Grow Up și ai doar de câștigat</h1>
 
             </div>
-            <div id="content2">
-                <div id="content2right">
+            <div class="bonus-div">
+                <div class="bonus-part">
 
                     <h2><img src="images/fem.png">Ești client nou?</h2>
                     <ol>
@@ -69,7 +64,7 @@
                         <li>Tu alegi unde îți transferăm banii: pe cardul tău bancar sau în numerar.</li>
                     </ol>
                 </div>
-                <div id="content2left">
+                <div class="bonus-part">
 
                     <h2><img src="images/masc.png">Ești client fidel?</h2>
                     <ol>
@@ -85,7 +80,7 @@
                 </div>
 
             </div>
-            <div id="content3">
+            <div class="about-div">
                 <h3>1. Despre compania Grow Up</h3> 
                 Grow Up – te ajută atunci când ai nevoie de bani rapid. 
                 Grow Up oferă credite online în Moldova, într-un mod simplu și avantajos, 
@@ -97,7 +92,7 @@
                 și acordăm împrumutul dorit, fără birocrație, drumuri la oficiile noastre și alte complicații. 
                 Scopul nostru e să schimbăm piața financiară din Moldova în una transparentă, simplă și comodă. 
                 <h3>2. Motivele pentru care clienții aleg Grow Up</h3> 
-                <ul style="list-style-type: none;">
+                <ul>
                     <li>2.1. E avantajos Dobânda se achită doar pe perioada folosirii împrumutului. O recalculăm și avem grijă să 
                         nu plătești în plus. Exemplu: Ai luat credit pe termen de 30 zile, 
                         dar îl întorci în 15 zile. În acest caz, achiți dobânda doar pentru 15 zile.</li>

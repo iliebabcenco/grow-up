@@ -1,4 +1,4 @@
-#mainContent {
+.mainContent {
     width: auto;
     background-color: white;
     margin: 0px auto;
@@ -8,25 +8,44 @@ body {
     padding: 0px;
     margin: 0px;
 }
+ul {
+    list-style-type: none;
+}
 
-/*#menu {
-    width: 100%;
-    background-color: white;
-    font-family: "Avenir Next Cyr";
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #FF8900;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+a {
+    color: #003366;	
+    text-decoration: none;
+}
+
+.ask-div {
+    margin: 15px auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #003366;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    align-items: center;
+    flex-direction: column;
+}
 
-}*/
-
-/*.menuItem {
-    margin-right: 15px;
-    margin-left: 20px; 
-    font-weight: bold;
-}*/
 
 
 .collapsible {
@@ -59,44 +78,26 @@ body {
 
 
 
-a {
-    color: #003366;	
-    text-decoration: none;
-}
 #menu a:hover, #menu a:active, #cmsgestdiv a:hover{
     text-decoration: none;
     color: #FF8900;
     transition-property: background-color, color;
     transition: 0.5s;
 }
-.logo:hover {
-    text-decoration: none;
-    color: #FF8900;
-    transition-property: background-color, color;
-    transition: 0.5s;
-}
 
-.logo {
+.logo, .deviz {
     color: #003366;
     font-family: "Brush Script MT", "Brush Script Std", cursive;
     font-size: 36px;
-    transition: 1s;
+}
+.deviz {
+    padding: 1rem;
 }
 
 #cont {
     align-self: center;
 }
 
-
-
-#promo {
-    width: 70%;
-    margin: 50px auto;
-    min-height: 600px;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-}
 
 #registeringdiv, #logindiv, #cmsgestdiv {
     width: 50%;
@@ -139,7 +140,7 @@ a {
     padding-bottom: 10px;
 
 }
-
+/*
 .btnsolicita, .btnback, #btnlogin {
     background-color: #FF8900;
     color: #003366;
@@ -154,7 +155,7 @@ a {
     transition-property: box-shadow;
     transition: 0.5s;
     outline:none;
-}
+}*/
 
 .btnsolicita:hover, .btnback:hover, #btnlogin:hover  {
     color: #003366;
@@ -244,17 +245,13 @@ a {
     margin: 0px;
 }
 
-#active {
+.pano {
     background-image: url("images/sunysucces.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
     background-origin: border-box;
     background-position: center center;
     backface-visibility: hidden;
-    float: left;
-    width: 63%;
-    margin-right: 0px;
-    height: 600px;
     animation: slideBg 8s linear 3s infinite alternate;
     animation-timing-function: ease-in-out 6s;
 }
@@ -278,118 +275,16 @@ a {
         background-image: url("images/3.jpg");
     }
 }
-#active p {
-    color: #003366;
-    font-family: "Brush Script MT", "Brush Script Std", cursive;
-    font-size: 36px;
-    padding: 10px;
-}
 
-#slidecontainer {
-    float: right;
-    width: 33%;
-    color: #003366;	
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px;
-    margin-left: 10px;
-}
-.slider {
-    -webkit-appearance: none;
-    width: 85%;
-    height: 15px;
-    border-radius: 5px;
-    background: #003366;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
 
-}
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #FF8900;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4caf50;
-    cursor: pointer;
-}
-input {
-    font-family: "Avenir Next Cyr";
-    font-size: 16px;
-    width: auto;
-    height: 25px;
-}
-#minMaxSumDiv p, #minMaxTermDiv p{
-    font-size: 10px;
-    padding: 0px;
-    margin: 0px;
-}
-#btnSolicita {
-    text-align: center;
-    background-color: #FF8900;
-    width: 150px;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 15px auto;
-}
-/*.sign-div, #goNext {
-    height: 25px;
-    width: 150px;
-    text-align: center;
-    font-weight: bold;
-    align-self: center;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 10px;
-    background-color: #FF8900;
-    display: block;
-}*/
-
-#btnSolicita:hover, #goNext:hover{
-    color: #003366;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    transition: 0.5s;
-    display: block;
-}
-/*.sign-div:hover a{
-    color: #003366;
-}*/
-#content1 {
-    margin: 15px auto;
-    margin-bottom: 50px;
-    text-align: center;
-    color: #003366;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#gonext {
-    align-self: center;
-    max-width: 50%;
-
-}
-#content2 {
-    width: 70%;
+.bonus-div {
+    width: 98%;
     margin: auto;
     margin-bottom: 75px;
-    padding-top: 0px;
-    min-height: 700px;
+    padding: 1rem;
     background-image: url("images/fon.jpg");
     background-size: cover;
-
+    font-size: 1.5rem;
     -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
@@ -405,30 +300,7 @@ input {
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     color: #003366;
     padding: 30px;
-}
-#content2right, #content2left{
-    float: left;
-    width: 45%;
-    color: #003366;
-    margin: 25px;
-    font-size: 24px;
-    font-weight: normal;
-}
-#content2right{
-    margin-left: 0px;
-    margin-top: 0px;
-}
-#content2left {
-    margin-top: 0px;
-    float: right;
-    margin-right: 50px;
-}
-#content2right ol, #content2left ol {
-    list-style-type: circle;
-}
-#content2right h2, #content2left h2 {
-    text-align: center;
-    color: #003366;
+
 }
 
 
