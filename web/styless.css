@@ -313,52 +313,17 @@ hr{
     display: flex;
     flex-direction: column;
 }
-#footer {
+.footer {
     background-color: #0A2536;
-    min-height: 20%;
     margin-bottom: 0px;
-    position: relative;
-}
-#innerFooter {
-    width: 70%;
-    height: 300px;
-    margin: auto;
-    position: relative;
-    margin-bottom: 0px;
-}
-#footerLeft {
-    margin-top: 15px;
-    margin-left: 50px;
-    float: left;
-    left: 50px;
+    width: 100%;
+    height: auto;
+    color: white;
     display: flex;
-    flex-direction: column;
-    color: white;
-    margin-bottom: 0px;
+    justify-content: center;
+    padding: 2rem;
 }
 
-#footerCenter {
-    margin-top: 100px;
-    margin-left: 130px;
-    margin-bottom: 0px;
-    color: white;
-    float: left;
-    font-size: 18px;
-    line-height: 2;
-
-}
-#footerRight {
-    margin-top: 2%;
-    /*    margin-left: 10%;*/
-    float: right;
-}
-#footerRight #visa, #footerRight #mastercard {
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin-left: 10px;
-    margin-right: 50px;
-}
 #paboutus {
     margin: 150px;
 }
@@ -368,6 +333,30 @@ hr{
     position: absolute;
     opacity: 0;
     cursor: pointer;
+}
+
+.medium-navbar-ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.footerLeft {
+    text-align: center;
+    margin: 1rem;
+}
+
+.footerLeft h3 {
+    margin: 1rem;
+}
+
+.footerCenter {
+    text-align: center;
+}
+
+.navm-link {
+    color: white;
+    margin: 1rem;
 }
 
 /* Create a custom radio button */
