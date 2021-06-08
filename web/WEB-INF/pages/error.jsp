@@ -1,9 +1,3 @@
-<%-- 
-    Document   : error
-    Created on : Aug 29, 2020, 8:33:57 AM
-    Author     : AveZomer
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +8,7 @@
     </head>
     <body>
         <%@include file="common/header.jspf"%>
-        <div id="promo" style="background-image: url(../images/404_img.jpg);"></div>
+        <div class="about-div" style="background-image: url(../images/404_img.jpg);"></div>
         <%@include file="common/footer.jspf"%>
     </body>
 </html>

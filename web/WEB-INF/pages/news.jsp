@@ -1,9 +1,3 @@
-<%-- 
-    Document   : news
-    Created on : Aug 29, 2020, 8:10:12 AM
-    Author     : AveZomer
---%>
-
 <%@page import="domain.Article"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
@@ -20,7 +14,7 @@
 
         <div class="about-div news-section">
             <hr>
-            <%            List<Article> listaDeArticole = (List<Article>) request.getAttribute("listaDeArticole");
+            <% List<Article> listaDeArticole = (List<Article>) request.getAttribute("listaDeArticole");
             %>
             <% for (int i = (listaDeArticole.size() - 1); i >= 0; i--) {
             %>

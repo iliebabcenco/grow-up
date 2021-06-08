@@ -1,46 +1,46 @@
 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="jsscript.js"></script>
         <link rel="stylesheet" type="text/css" href="styless.css">
+        <link rel="stylesheet" type="text/css" href="resp.css">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Registering Page</title>
 
     </head>
-    <body style="background-image: url(images/bani.jpg); background-attachment: fixed;">
+    <body class="money-body">
 
-        <div id="registeringdiv" style="padding-bottom: 0.5%; padding-top: 0.5%;">
+        <div class="registeringdiv">
 
             <form action="executeregisteringserv" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data" >
-                <h3 style="text-align: center;">Introduceți datele:</h3>
-                <table style="padding: 5px; margin: 20px auto;">
+                <h3>Introduceți datele:</h3>
+                <table>
                     <tr>
                         <td>Numele: </td>
-                        <td><input type="text" name="name" lang="en" value="" size="20"/></td>
+                        <td><input type="text" class="form-control" name="name" lang="en" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Prenumele: </td>
-                        <td><input type="text" name="surename" value="" size="20"/></td>
+                        <td><input type="text" class="form-control" name="surename" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>IDNP: </td>
-                        <td><input type="text" name="idnp" value="" size="20"/></td>
+                        <td><input type="text" class="form-control" name="idnp" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Data nasterii: </td>
-                        <td><input type="date" name="dataNasterii" value="" size="20"/></td>
+                        <td><input type="date" class="form-control" name="dataNasterii" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Buletin de identitate: </td>
-                        <td><input type="text" name="buliden" value="" size="20"/></td>
+                        <td><input type="text" class="form-control" name="buliden" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Domiciliu: </td>
-                        <td><input type="text" name="domiciliu" value="" size="20"/></td>
+                        <td><input type="text" class="form-control" name="domiciliu" value="" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Suma(MDL): </td>
@@ -49,9 +49,8 @@
                             if (request.getParameter("mySumField") != null) {
                                 param1 = request.getParameter("mySumField");
                             }
-
                         %>
-                        <td><input id="sumaregistr" type="text" name="suma" value="<%= param1%>" size="20"/></td>
+                        <td><input id="sumaregistr" class="form-control" type="text" name="suma" value="<%= param1%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Termen(luni): </td>
@@ -62,18 +61,18 @@
                             }
 
                         %>
-                        <td><input id="termregistr" type="text" name="term" value="<%= param2%>" size="20"/></td>
+                        <td><input id="termregistr" class="form-control" type="text" name="term" value="<%= param2%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">E-mail: </td>
-                        <td><input type="email" name="e-mail" value="" size="20" placeholder="name@xxx.xxx"/></td>
+                        <td>E-mail: </td>
+                        <td><input type="email" name="e-mail" class="form-control" value="" size="20" placeholder="name@xxx.xxx"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">Telefon mobil: </td>
-                        <td><input type="tel" name="phone" value="" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
+                        <td>Telefon mobil: </td>
+                        <td><input type="tel" name="phone" class="form-control" value="" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">Venitul mediu lunar (MDL): </td>
+                        <td>Venitul mediu lunar (MDL): </td>
                         <td>
                             <label class="containervenituri">1000-3000
                                 <input type="radio" checked="checked" name="radio" value="1000-3000">
@@ -96,20 +95,16 @@
                     <tr>
 
                         <td><label for="myfile">Încarcă buletin <br>de identitate:</label></td>
-                        <td ><input type="file" id="myfile" name="myfile" style="font-size: 10px;"></td>
+                        <td ><input type="file" id="myfile" name="myfile"></td>
 
 
 
                     </tr>
                 </table>
-                <div style="text-align: center;">
-                    <input class="btnsolicita" onclick="clickedButton()" type="submit" name="action" value="Solicită">
-                    <input class="btnsolicita" onclick="GoToHomePage()" name="actionback" value="Înapoi" style="text-align: center;"/>
-                </div>
+                    <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
+                    <input class="btnsolicita reg-btn" onclick="GoToHomePage()" type="button" name="actionback" value="Înapoi">
             </form>
-            <h3 id="alerting" style="color:green; display: block; text-align: center;">
-
-
+            <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("message");
                     if (str == null) {
                         str = "";
@@ -124,6 +119,6 @@
 
 
         <%@include file="common/footer.jspf"%>
-        <script src="../../jsscript.js"></script>
+        <script src="jsscript.js"></script>
     </body>
 </html>

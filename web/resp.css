@@ -70,11 +70,11 @@
     .about-div {
         font-size: 1.1rem;
     }
-    
+
     .pano {
         width: 100%;
         height: 600px;
-        
+
     }
 
     .slider {
@@ -95,11 +95,11 @@
     .sum-par, .calc-details-p {
         font-size: 1.2rem;
     }
-    
+
     .slidecontainer {
         padding: 2rem;
         color: #003366;
-        
+
     }
     .calc-title {
         text-align: center;
@@ -110,9 +110,36 @@
     }
     .footer {
         flex-direction: column;
-        
+
     }
     
+    .footer-part {
+        text-align: center;
+        margin: 1rem 0;
+    } 
+
+    .registeringdiv {
+        margin: 3rem auto;
+        background-color: white;
+        width: 95%;
+        padding: 2rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+       
+    }
+    
+    .registeringdiv h3 {
+         text-align: center;
+    }
+    
+    .registeringdiv table {
+        margin: 1rem auto;
+    }
+    
+    .reg-btn {
+        margin: 1rem 0;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -149,12 +176,12 @@
         box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
         transition: box-shadow 0.3s ease;
     }
-    
+
     .bonus-div {
         display: flex;
         max-width: 1300px;
     }
-    
+
     .about-div {
         max-width: 1300px;
     }
@@ -163,6 +190,14 @@
         justify-content: center;
         align-content: center;
         align-items: center;
+        
+    }
+    .footer-part {
+        text-align: center;
+        margin: 0 3rem;
+    }
+    .registeringdiv {
+        max-width: 40rem;
     }
 
 }
@@ -196,15 +231,15 @@
     .contact-p {
         margin-top: 2rem;
     }
-    
+
     .promo {
         display: flex;
         max-width: 1300px;
     }
     .pano {
-         height: auto;
+        height: auto;
     }
-    
+
     .slidecontainer {
         width: 40rem;
     }
