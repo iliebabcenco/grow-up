@@ -16,34 +16,34 @@
         <div class="registeringdiv">
 
             <form action="executeregisteringserv" method="POST" onsubmit="return validateForm()" enctype="multipart/form-data" >
-                <h3>Introduceți datele:</h3>
+                <h3>Enter data:</h3>
                 <table>
                     <tr>
-                        <td>Numele: </td>
+                        <td>Name: </td>
                         <td><input type="text" class="form-control" name="name" lang="en" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Prenumele: </td>
+                        <td>Surename: </td>
                         <td><input type="text" class="form-control" name="surename" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>IDNP: </td>
+                        <td>P.C.: </td>
                         <td><input type="text" class="form-control" name="idnp" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Data nasterii: </td>
+                        <td>Birhtday: </td>
                         <td><input type="date" class="form-control" name="dataNasterii" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Buletin de identitate: </td>
+                        <td>Passport: </td>
                         <td><input type="text" class="form-control" name="buliden" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Domiciliu: </td>
+                        <td>Residency: </td>
                         <td><input type="text" class="form-control" name="domiciliu" value="" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Suma(MDL): </td>
+                        <td>Sum(MDL): </td>
                         <%
                             String param1 = "";
                             if (request.getParameter("mySumField") != null) {
@@ -53,7 +53,7 @@
                         <td><input id="sumaregistr" class="form-control" type="text" name="suma" value="<%= param1%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Termen(luni): </td>
+                        <td>Term(months): </td>
                         <%
                             String param2 = "";
                             if (request.getParameter("myTermField") != null) {
@@ -67,11 +67,11 @@
                         <td><input type="email" name="e-mail" class="form-control" value="" size="20" placeholder="name@xxx.xxx"/></td>
                     </tr>
                     <tr>
-                        <td>Telefon mobil: </td>
+                        <td>Phone: </td>
                         <td><input type="tel" name="phone" class="form-control" value="" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
                     </tr>
                     <tr>
-                        <td>Venitul mediu lunar (MDL): </td>
+                        <td>Average income (MDL): </td>
                         <td>
                             <label class="containervenituri">1000-3000
                                 <input type="radio" checked="checked" name="radio" value="1000-3000">
@@ -92,12 +92,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="myfile">Încarcă buletin <br>de identitate:</label></td>
+                        <td><label for="myfile">Upload passport<br> scan:</label></td>
                         <td ><input type="file" id="myfile" name="myfile"></td>
                     </tr>
                 </table>
-                <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
-                <a href="homeserv" class="btnsolicita aback" value="Înapoi">Back</a>
+                <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Request">
+                <a href="homeserv" class="btnsolicita aback" value="Back">Back</a>
             </form>
             <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("message");

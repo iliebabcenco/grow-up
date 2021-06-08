@@ -18,7 +18,7 @@
 
             <% List<Request> listaCererilor = (List<Request>) request.getAttribute("listaCererilor");
             %>
-            <h2>Lista solicitărilor</h2>
+            <h2>List of loan requests</h2>
             <table class='table table-striped table-hover' border="1" cellspacing="1" cellpadding="1">
                 <thead>
                     <tr>

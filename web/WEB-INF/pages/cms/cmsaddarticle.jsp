@@ -27,12 +27,12 @@
                 Article artSelectat = (Article) request.getAttribute("articolSelectat");
             %>
 
-            <h2>Lista articolelor</h2>
+            <h2>News List</h2>
             <table class='table table-striped table-hover' border="1" cellspacing="1" cellpadding="1">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Titlul</th>
+                        <th>Title</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -57,11 +57,11 @@
             <form action="news-actions" method="POST">
                 <input class="id-field" type="text" name="idtext" value="<%=artSelectat.getId()%>"/>
                 <p>
-                    <label for="titletext">Introduceți titlul articolului:</label>
+                    <label for="titletext">Enter the title:</label>
                     <input id="article-title" class="form-control" type="text" name="titletext" value="<%=artSelectat.getTitle()%>"/>
                 </p>
                 <p>
-                    <label for="editor1">Adaugă articolul aici:</label>
+                    <label for="editor1">Enter the article:</label>
                     <textarea cols="80" id="editor1" name="editor1" rows="10" ><%=artSelectat.getContent()%></textarea>
                 </p>
                 <ckeditor:replace replace="editor1" basePath="../ckeditor/"/>

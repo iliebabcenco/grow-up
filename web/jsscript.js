@@ -17,9 +17,9 @@ function updateRangeInput(val) {
 }
 function updateTextTermInput(val) {
     if (val == 1) {
-        document.getElementById('myTermField').value = val + ' lună';
+        document.getElementById('myTermField').value = val + ' month';
     } else {
-        document.getElementById('myTermField').value = val + ' luni';
+        document.getElementById('myTermField').value = val + ' months';
     }
     var suma = document.getElementById('mySumField').value;
     document.getElementById('solicitareSum').innerHTML = suma;

@@ -14,31 +14,31 @@
             <%@include file="common/header.jspf" %>
             <div class="promo">
                 <div class="pano">
-                    <p class="deviz">20 de ani de succes! <br>
-                        Echipa Grow Up
+                    <p class="deviz">20 years of success! <br>
+                        Grow Up Team
                     </p>
                 </div>
                 <div class="slidecontainer">
                     <form method="POST" action="registering.html">
-                        <h1 class="calc-title">Calculator sumă</h1>
-                        <p class="calc-details-p">Alege suma <input type="text" id="mySumField" class="form-control" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
+                        <h1 class="calc-title">Loan calculator</h1>
+                        <p class="calc-details-p">Choose sum <input type="text" id="mySumField" class="form-control" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
 
                         <input id="mySumRange" type="range" step="1000" min="1000" max="100000" value="50000" class="slider" onchange="updateTextInput(this.value);">
 
                         <div class="minMaxDiv"><p>min 1000 MDL</p> <p>max 100000 MDL</p></div>
 
-                        <p class="calc-details-p">Alege termenul <input type="text" value="12 luni" id="myTermField" class="form-control" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
+                        <p class="calc-details-p">Choose term <input type="text" value="12 luni" id="myTermField" class="form-control" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
 
                         <input type="range" min="1" max="60" value="12" class="slider" id="myTermRange" onchange="updateTextTermInput(this.value);">
-                        <div class="minMaxDiv"><p>1 lună</p> <p>60 luni</p></div>
+                        <div class="minMaxDiv"><p>1 month</p> <p>60 months</p></div>
                         <div>
-                            <p class="sum-par">Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p>
-                            <p class="sum-par">Plata lunară: <span id="rambursareSum"> 0 MDL</span></p>
-                            <p class="sum-par">Costul total: <span id="solicitareCost"> 0 MDL</span></p>
-                            <p class="sum-par">Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p>
+                            <p class="sum-par">Requested sum: <span id="solicitareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Monthly pay: <span id="rambursareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Total cost: <span id="solicitareCost"> 0 MDL</span></p>
+                            <p class="sum-par">To refund: <span id="solicitareRambursare"> 0 MDL</span></p>
                         </div>
 
-                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum">
+                        <input class="btnsolicita" type="submit" name="action" value="Request now!">
                     </form>
                 </div>
 
@@ -46,10 +46,10 @@
 
             <div class="ask-div">
 
-                <h2>Vezi care sunt șansele să obții un </h2>
-                <h1>credit online!</h1>
-                <div ><a class="btnsolicita" href="registering.html">Să începem!</a></div>
-                <h1>Alege Grow Up și ai doar de câștigat</h1>
+                <h2>Check your chances to get a </h2>
+                <h1>loan online!</h1>
+                <div ><a class="btnsolicita" href="registering.html">Let's start!</a></div>
+                <h1>Choose Grow Up and you will only have to win</h1>
 
             </div>
             <div class="bonus-div">

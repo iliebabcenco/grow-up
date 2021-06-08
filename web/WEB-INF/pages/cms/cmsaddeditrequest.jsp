@@ -20,42 +20,42 @@
                 String date = new SimpleDateFormat("yyyy-MM-dd").format(req.getBirthday());
             %>
             <form action="../cms/save-request" method="POST" onsubmit="return validateForm()" >
-                <h3>Introduceți datele:</h3>
+                <h3>Enter data:</h3>
                 <table>
                     <tr>
-                        <td>Numele: </td>
+                        <td>Name: </td>
                         <td>
                             <input type="hidden" name="reqId" value="<%= req.getId()%>"/>
                             <input type="text" class="form-control" name="name" lang="en" value="<%= req.getName()%>" size="20"/>
                         </td>
                     </tr>
                     <tr>
-                        <td>Prenumele: </td>
+                        <td>Surename: </td>
                         <td><input type="text" class="form-control" name="surename" value="<%= req.getSurename()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>IDNP: </td>
+                        <td>P.C.: </td>
                         <td><input type="text" class="form-control" name="idnp" value="<%= req.getIdnp()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Data nasterii: </td>
+                        <td>Birthday: </td>
                         <td><input type="date" class="form-control" name="dataNasterii" value="<%= date%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Buletin de identitate: </td>
+                        <td>Passport: </td>
                         <td><input type="text" class="form-control" name="buliden" value="<%= req.getCard_id()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Domiciliu: </td>
+                        <td>Residency: </td>
                         <td><input type="text" class="form-control" name="domiciliu" value="<%= req.getResidence()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Suma(MDL): </td>
+                        <td>Sum(MDL): </td>
 
                         <td><input id="sumaregistr" class="form-control" type="text" name="suma" value="<%= req.getSum()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td>Termen(luni): </td>
+                        <td>Term(months): </td>
                         <td><input id="termregistr" class="form-control" type="text" name="term" value="<%= req.getTerm()%>" size="20"/></td>
                     </tr>
                     <tr>
@@ -63,11 +63,11 @@
                         <td><input type="email" class="form-control" name="e-mail" value="<%= req.getMail()%>" size="20" placeholder="name@xxx.xxx"/></td>
                     </tr>
                     <tr>
-                        <td>Telefon mobil: </td>
+                        <td>Phone: </td>
                         <td><input type="tel" name="phone" class="form-control" value="<%= req.getPhone()%>" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
                     </tr>
                     <tr>
-                        <td>Venitul mediu lunar (MDL): </td>
+                        <td>Average income (MDL): </td>
                         <td>
                             <label class="containervenituri">1000-3000
                                 <input type="radio" name="radio" value="1000-3000" accept=""
@@ -106,7 +106,7 @@
                 </table>
                 <div>
                     <input class="btnsolicita reg-btn" onclick="" type="submit" name="action" value="Save"/>
-                    <a class="btnsolicita aback" href="requests">Înapoi</a>
+                    <a class="btnsolicita aback" href="requests">Back</a>
                 </div>
             </form>
             <h3 id="alerting">
