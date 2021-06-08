@@ -107,6 +107,24 @@ a:hover {
     margin-bottom: 4rem;
 }
 
+            
+.news-img {
+    
+    float: right; 
+    width: 600px; 
+    margin-left: 15px;
+}
+
+.news-section img {
+    max-width: 100%;
+}
+.news-section table {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+}
+
 #cont {
     align-self: center;
 }

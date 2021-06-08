@@ -17,12 +17,12 @@
     </head>
     <body>
         <%@include file="common/header.jspf"%>
-        
-        <div id="newscontent">
+
+        <div class="about-div news-section">
             <hr>
             <%            List<Article> listaDeArticole = (List<Article>) request.getAttribute("listaDeArticole");
             %>
-            <% for (int i = (listaDeArticole.size()-1); i >= 0; i-- ) {
+            <% for (int i = (listaDeArticole.size() - 1); i >= 0; i--) {
             %>
 
             <h1><%=listaDeArticole.get(i).getTitle()%></h1>
@@ -32,10 +32,8 @@
                 }
             %>
 
-
-            
             <h1> 6 întrebări de control: La ce să atragi atenția când vrei să iei un credit</h1>
-            <img src="images/6-ntrebri-1.png" style="float: right; height: 400px; width: 600px; margin-left: 15px;">
+            <img class="news-img" src="images/6-ntrebri-1.png">
             <h5>15 June 2020 23:41</h5> 
             <p>Ai nevoie de bani și parcă te-ar bate un gând să iei un credit? 
                 Creditul e o soluție comodă și rapidă, e adevărat. 

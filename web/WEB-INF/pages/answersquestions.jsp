@@ -4,13 +4,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <title>Answers Page</title>
     </head>
     <body>
         <%@include file="common/header.jspf"%>
         <div class="about-div"><h1 style="text-align: center;">GĂSEȘTI RĂSPUNSURILE LA CELE MAI FRECVENTE ÎNTREBĂRI</h1>
-            <button class="collapsible">De ce Grow Up?<img src="images/header_select.svg" style="float: right; height: 15px; width: 15px; margin-top: 7px;"></button>
+            <button class="collapsible">De ce Grow Up?<img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Pentru că Grow Up este un serviciu de creditare online din Moldova. 
                     Totul are loc 100% online, depui cererea online, primești răspunsul online, 
@@ -30,7 +30,7 @@
                 </ol>
             </div>
 
-            <button class="collapsible">Cum aplic pentru un credit online?<img src="images/header_select.svg" style="float: right; height: 15px; width: 15px; margin-top: 7px;"></button>
+            <button class="collapsible">Cum aplic pentru un credit online?<img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>E foarte comod să aplici pentru un credit la Grow Up, 
                     așa cum poți depune cererea 24/7 și totul e online. 
@@ -56,26 +56,30 @@
                 </ol>
             </div>
 
-            <button class="collapsible">Care e suma maximă ce o pot obține pentru un credit?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">Care e suma maximă ce o pot obține pentru un credit?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Poți primi un credit nebancar pe termen scurt cu suma maximă de 100000 lei, pe un termen de 60 luni.</p>
             </div>
 
-            <button class="collapsible">În cât timp primesc răspunsul după depunerea cererii?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">În cât timp primesc răspunsul după depunerea cererii?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Pentru clienții noi – depunem tot efortul să o facem în 7 minute. 
                     Pentru clienții fideli - suntem și mai rapizi, și de cele mai multe ori nu durează decât 2 minute.
                 </p>
             </div>
 
-            <button class="collapsible">Pot să achit creditul până la termenul de expirare?<img src="images/header_select.svg" class="arrow-img"> </button>
+            <button class="collapsible">Pot să achit creditul până la termenul de expirare?
+                <img src="images/header_select.svg" class="arrow-img"> </button>
             <div class="content">
                 <p>Desigur. Plus dobânda se recalculează și achiți doar pentru zilele utilizate. 
                     De exemplu: În cazul în care ai luat un credit pe 30 zile și dorești să-l rambursezi în 10 zile, 
                     atunci achiți dobânda doar pentru 10 zile. Totul e transparent și corect!
             </div>
 
-            <button class="collapsible">Care sunt condițiile pe care e nevoie să le îndeplinesc pentru a primi un credit?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">Care sunt condițiile pe care e nevoie să le îndeplinesc pentru a primi un credit?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Pentru a putea examina cererea de un credit online e nevoie: </p>
                 <ul>
@@ -88,21 +92,24 @@
                 </ul>
             </div>
 
-            <button class="collapsible">Este necesar să fiu angajat oficial pentru a beneficia de un credit?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">Este necesar să fiu angajat oficial pentru a beneficia de un credit?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Nu, așa cum e nevoie doar de buletin de identitate valabil și să ai un număr de telefon mobil activ. 
                     Îți cerem doar să fii sigur că dispui de venituri suficiente pentru a rambursa în termen creditul și plățile aferente.
                 </p>
             </div>
 
-            <button class="collapsible">Pentru a lua un credit, este nevoie de gaj/persoana de încredere? <img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">Pentru a lua un credit, este nevoie de gaj/persoana de încredere? 
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Nu e nevoie de gaj sau de giranți/fidejusori. 
                     Te vom ruga să lași contactele unei persoane de încredere.
                 </p>
             </div>
 
-            <button class="collapsible">Dacă am un credit activ de la alte companii de creditare, pot lua un credit de la Grow Up? <img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">Dacă am un credit activ de la alte companii de creditare, pot lua un credit de la Grow Up? 
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Desigur și ar fi bine ca să ne spuneți asta din start.
                 </p>
@@ -130,7 +137,8 @@
                 <p>Banii îi poți primi pe card sau în numerar la oricare dintre sucursalele Moldindconbank și oficiile Poșta Moldovei.</p>
             </div>
 
-            <button class="collapsible">În cât timp ajung banii pe card? În cât timp pot ridica banii?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible">În cât timp ajung banii pe card? În cât timp pot ridica banii?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <ul>
                     <li>Dacă alegi să primești banii pe card - procesul va dura în medie 60 minute, în dependență de banca la care vă deserviți. </li>
@@ -138,7 +146,8 @@
                 </ul>
             </div>
 
-            <button class="collapsible ">Poate face altcineva achitarea pentru mine?<img src="images/header_select.svg" class="arrow-img"></button>
+            <button class="collapsible ">Poate face altcineva achitarea pentru mine?
+                <img src="images/header_select.svg" class="arrow-img"></button>
             <div class="content">
                 <p>Da. Doar te rugăm să verifici dacă persoana cui ai încredințat acest lucru a efectuat transferul. 
                     Noi te vom informa prin SMS despre plata efectuată cu succes.
