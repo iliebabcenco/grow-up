@@ -35,6 +35,14 @@ a {
     text-decoration: none;
 }
 
+
+a:hover {
+    text-decoration: none;
+    color: #FF8900;
+    transition-property: background-color, color;
+    transition: 0.5s;
+}
+
 .ask-div {
     margin: 15px auto;
     margin-bottom: 50px;
@@ -45,8 +53,6 @@ a {
     align-items: center;
     flex-direction: column;
 }
-
-
 
 .collapsible {
     color: #003366;
@@ -77,14 +83,6 @@ a {
 }
 
 
-
-#menu a:hover, #menu a:active, #cmsgestdiv a:hover{
-    text-decoration: none;
-    color: #FF8900;
-    transition-property: background-color, color;
-    transition: 0.5s;
-}
-
 .logo, .deviz {
     color: #003366;
     font-family: "Brush Script MT", "Brush Script Std", cursive;
@@ -92,6 +90,21 @@ a {
 }
 .deviz {
     padding: 1rem;
+}
+
+.list-img {
+    width: 5rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.aboutUsList p {
+    clear: both;
+    margin-bottom: 1rem; 
+}
+
+.aboutUsList {
+    margin-bottom: 4rem;
 }
 
 #cont {
@@ -140,22 +153,6 @@ a {
     padding-bottom: 10px;
 
 }
-/*
-.btnsolicita, .btnback, #btnlogin {
-    background-color: #FF8900;
-    color: #003366;
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    align-items: center;
-    align-self: center;
-    transition-property: box-shadow;
-    transition: 0.5s;
-    outline:none;
-}*/
 
 .btnsolicita:hover, .btnback:hover, #btnlogin:hover  {
     color: #003366;
@@ -165,84 +162,6 @@ a {
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     transition: 0.5s;
 
-}
-#promocontacts {
-    width: 45%;
-    margin: 50px auto;
-    height: 685px;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-}
-#promocontacts1 {
-    float: left;
-    width: 45%;
-    margin: 15px;
-    margin-right: 0px;
-}
-#promocontacts2 {
-    float: right;
-    width: 45%;
-    margin: 15px;
-    margin-left: 0px;
-    color: #003366;
-}
-#newscontent {
-    width: 60%;
-
-    margin: 50px auto;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    color: #003366;
-    padding: 20px;
-    text-align: justify;
-}
-#promoAboutUs{
-    width: 60%;
-
-    margin: 50px auto;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    color: #003366;
-    padding: 20px;
-    text-align: justify;
-}
-#promoAboutUs img {
-    height: 100px;
-    width: 100px;
-    float: left;
-    margin-right: 15px;
-}
-#promoAboutUs p {
-    margin-top: 0px;
-
-}
-#promohowobtain, #promohowrefund, #promoaq {
-    width: 60%;
-    margin: 50px auto;
-    auto-height: 950px;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    color: #003366;
-    padding: 20px;
-    text-align: justify;
-}
-#promoaq {
-    auto-height: true;
-}
-#promohowobtain {
-    height: 900px;
-}
-#howobtain {
-    width: 60%;
-    float: left;
-}
-#howobtain ul li {
-    padding: 0px;
-    margin: 0px;
 }
 
 .pano {
@@ -289,30 +208,7 @@ a {
     -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
     box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
 }
-#content3 {
-    width: 70%;
-    margin: auto;
-    margin-bottom: 75px;
-    padding-top: 0px;
-    min-height: 700px;
-    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
-    color: #003366;
-    padding: 30px;
 
-}
-
-
-hr{
-    border: 2px solid #FF8900;
-    border-radius: 5px;
-    opacity: 0.7;
-}
-#aboutUsSpisok{
-    display: flex;
-    flex-direction: column;
-}
 .footer {
     background-color: #0A2536;
     margin-bottom: 0px;
@@ -321,11 +217,17 @@ hr{
     color: white;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
-#paboutus {
-    margin: 150px;
+.about-div {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.howobtain {
+    width: 100%;
+    padding-right: 1.2rem;
 }
 
 /* Hide the browser's default radio button */

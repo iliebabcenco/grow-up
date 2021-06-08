@@ -16,8 +16,8 @@
     <body>
         <%@include file="common/header.jspf"%>
 
-        <div id="promohowobtain">
-            <div id="howobtain">
+        <div class="about-div howobtain-main">
+            <div class="howobtain">
                 <h1>Cum obțin un credit rapid de la Grow Up? </h1>
                 Obținerea de credit online este un mod eficient de a face față cheltuielilor care apar brusc. 
                 Poți obține un împrumut de la Grow Up online: accesând site-ul nostru folosind telefonul, laptopul sau tableta, fără a părăsi casa sau locul de muncă sau dacă îți este mai comod, te apropii la unul din oficiile noastre, avem în Chișinău, Rîșcani și Bălți, adresele exacte le găsiți aici. 
@@ -43,35 +43,29 @@
                 <h3>Primești banii</h3> <p>Primești banii direct pe card (de regulă durează până la 60 minute). 
                     Sau ridici banii în numerar(poți lua banii după 5 minute de la semnarea contractului online).</p> 
             </div>
-            <div id="calculator">
-                <div id="slidecontainer">
-                    <form method="POST" action="registrationserv">
-                        <h1 style="margin-left: 15%;">Calculator sumă</h1>
-                        <p>Alege suma <input type="text" id="mySumField" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
+            <div class="slidecontainer">
+                    <form method="POST" action="registering.html">
+                        <h1 class="calc-title">Calculator sumă</h1>
+                        <p class="calc-details-p">Alege suma <input type="text" id="mySumField" class="form-control" name="mySumField" value="50000 MDL" onchange="updateRangeInput(this.value);"></p>
 
                         <input id="mySumRange" type="range" step="1000" min="1000" max="100000" value="50000" class="slider" onchange="updateTextInput(this.value);">
 
-                        <div id="minMaxSumDiv"><p style="float: left;">min 1000 MDL</p> <p style="float: right; margin-right: 50px;">max 100000 MDL</p></div>
+                        <div class="minMaxDiv"><p>min 1000 MDL</p> <p>max 100000 MDL</p></div>
 
-                        <div style="clear: both;"></div>
-                        <p>Alege termenul <input type="text" value="12 luni" id="myTermField" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
+                        <p class="calc-details-p">Alege termenul <input type="text" value="12 luni" id="myTermField" class="form-control" name="myTermField" onchange="updateRangeTermInput(this.value);"></p>
 
                         <input type="range" min="1" max="60" value="12" class="slider" id="myTermRange" onchange="updateTextTermInput(this.value);">
-                        <div id="minMaxTermDiv"><p style="float: left;">1 lună</p> <p style="float: right; margin-right: 50px;">60 luni</p></div>
-                        <div style="clear: both;"></div>
-                        <div style="float: left; margin-top: 15px; margin-bottom: 10px;">
-                            <p>Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p><br>
-                            <p>Plata lunară: <span id="rambursareSum"> 0 MDL</span></p><br>
-                            <p>Costul total: <span id="solicitareCost"> 0 MDL</span></p><br>	
-                            <p>Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p><br>
+                        <div class="minMaxDiv"><p>1 lună</p> <p>60 luni</p></div>
+                        <div>
+                            <p class="sum-par">Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Plata lunară: <span id="rambursareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Costul total: <span id="solicitareCost"> 0 MDL</span></p>
+                            <p class="sum-par">Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p>
                         </div>
-                        <div style="clear: both;"></div>
-                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum" style="margin-left: 30%;">
-<!--                        <div id="btnSolicita"><a href="registrationserv">Solicită acum</a></div>-->
-                        
+
+                        <input class="btnsolicita" type="submit" name="action" value="Solicită acum">
                     </form>
                 </div>
-            </div>
         </div>
         <%@include file="common/footer.jspf"%>
     </body>
