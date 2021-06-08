@@ -1,13 +1,21 @@
 <%@ page pageEncoding="UTF-8" %>
-<div id="menu" style="height: 5em; border-radius: 15px; align-content: space-between; margin: 0px auto;">
-    <ul id="menuList" style="margin: auto;">
-        <li><a href="../home.html">Main Page</a></li>
-        <li><a href="../news.html">Verifică noutăți</a></li>
-        <li><a href="requests">Solicitări</a></li>
-        <li><a href="news">Articole</a></li>
-        <li><a href="save-request?action=open">Adaugă cerere nouă</a></li>
-    </ul>
-    <div id="btnSolicita"><a href="cmslogoutserv">Log Out</a></div>
-    <div style="clear: both;"></div>
+<script src="https://kit.fontawesome.com/1b3f199c8f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../resp.css"/>
+<link rel="stylesheet" href="../styless.css"/>
+<div class="menu cmsmenu">
+    <div id="top-logo" class="logo"><a id="logohref" href="../home.html">Grow Up</a></div>
+    <div class="nav-part-menu">
+        <a href="#" class="display-menuLink" onclick="clickNavMenu()"><i class="fas fa-bars fa-2x"></i></a>
+    </div>
+    <div class="nav-part cms-menu-div">
+        <ul class="menuList">
+            <li class="menuItem"><a class="menuLink" href="requests">Manage Requests</a></li>
+            <li class="menuItem"><a class="menuLink" href="../news.html">Check news</a></li>
+            <li class="menuItem"><a class="menuLink" href="news">Manage News</a></li>
+            <li class="menuItem"><a class="menuLink" href="save-request?action=open">Add new request</a></li>
+        </ul>
+        <div ><a href="cmslogoutserv" class="special-link">Log Out</a></div>
 
+    </div>
 </div>
+<script src="../jsscript.js"></script>

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styless.css">
         <link rel="stylesheet" type="text/css" href="resp.css">
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Registering Page</title>
 
     </head>
@@ -101,8 +101,8 @@
 
                     </tr>
                 </table>
-                    <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
-                    <a href="homeserv" class="btnsolicita aback" value="Înapoi">Back</a>
+                <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
+                <a href="homeserv" class="btnsolicita aback" value="Înapoi">Back</a>
             </form>
             <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("message");

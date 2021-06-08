@@ -8,65 +8,66 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../styless.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="//db.onlinewebfonts.com/c/1273d9cc8e74f85a3e5dd1b732aa2b4c?family=Avenir+Next+Cyr" rel="stylesheet" type="text/css"/>
         <title>Add/Edit a request</title>
     </head>
-    <body style="background-image: url(../images/bani.jpg); background-attachment: fixed;">
+    <body class="money-body">
 
         <%@include file="common/cmsheader.jspf" %>
-        <div id="registeringdiv" style="padding-bottom: 0.5%; padding-top: 0.5%;">
+        <div class="registeringdiv">
             <% Request req = (Request) request.getAttribute("selectedRequest");
                 String date = new SimpleDateFormat("yyyy-MM-dd").format(req.getBirthday());
             %>
             <form action="../cms/save-request" method="POST" onsubmit="return validateForm()" >
-                <h3 style="text-align: center;">Introduceți datele:</h3>
-                <table style="padding: 5px; margin: 20px auto;">
+                <h3>Introduceți datele:</h3>
+                <table>
                     <tr>
                         <td>Numele: </td>
                         <td>
                             <input type="hidden" name="reqId" value="<%= req.getId()%>"/>
-                            <input type="text" name="name" lang="en" value="<%= req.getName()%>" size="20"/>
+                            <input type="text" class="form-control" name="name" lang="en" value="<%= req.getName()%>" size="20"/>
                         </td>
                     </tr>
                     <tr>
                         <td>Prenumele: </td>
-                        <td><input type="text" name="surename" value="<%= req.getSurename()%>" size="20"/></td>
+                        <td><input type="text" class="form-control" name="surename" value="<%= req.getSurename()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>IDNP: </td>
-                        <td><input type="text" name="idnp" value="<%= req.getIdnp()%>" size="20"/></td>
+                        <td><input type="text" class="form-control" name="idnp" value="<%= req.getIdnp()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Data nasterii: </td>
-                        <td><input type="date" name="dataNasterii" value="<%= date%>" size="20"/></td>
+                        <td><input type="date" class="form-control" name="dataNasterii" value="<%= date%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Buletin de identitate: </td>
-                        <td><input type="text" name="buliden" value="<%= req.getCard_id()%>" size="20"/></td>
+                        <td><input type="text" class="form-control" name="buliden" value="<%= req.getCard_id()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Domiciliu: </td>
-                        <td><input type="text" name="domiciliu" value="<%= req.getResidence()%>" size="20"/></td>
+                        <td><input type="text" class="form-control" name="domiciliu" value="<%= req.getResidence()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Suma(MDL): </td>
 
-                        <td><input id="sumaregistr" type="text" name="suma" value="<%= req.getSum()%>" size="20"/></td>
+                        <td><input id="sumaregistr" class="form-control" type="text" name="suma" value="<%= req.getSum()%>" size="20"/></td>
                     </tr>
                     <tr>
                         <td>Termen(luni): </td>
-                        <td><input id="termregistr" type="text" name="term" value="<%= req.getTerm()%>" size="20"/></td>
+                        <td><input id="termregistr" class="form-control" type="text" name="term" value="<%= req.getTerm()%>" size="20"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">E-mail: </td>
-                        <td><input type="email" name="e-mail" value="<%= req.getMail()%>" size="20" placeholder="name@xxx.xxx"/></td>
+                        <td>E-mail: </td>
+                        <td><input type="email" class="form-control" name="e-mail" value="<%= req.getMail()%>" size="20" placeholder="name@xxx.xxx"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">Telefon mobil: </td>
-                        <td><input type="tel" name="phone" value="<%= req.getPhone()%>" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
+                        <td>Telefon mobil: </td>
+                        <td><input type="tel" name="phone" class="form-control" value="<%= req.getPhone()%>" size="20" pattern="0[6-7]{1}[0-9]{7}" placeholder="06xxxxxxx, 07xxxxxxx"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align: left">Venitul mediu lunar (MDL): </td>
+                        <td>Venitul mediu lunar (MDL): </td>
                         <td>
                             <label class="containervenituri">1000-3000
                                 <input type="radio" name="radio" value="1000-3000" accept=""
@@ -103,12 +104,12 @@
                     </tr>
 
                 </table>
-                <div style="text-align: center;">
-                    <input class="btnsolicita" onclick="" type="submit" name="action" value="Save"/>
-                    <a class="btnsolicita" href="requests" style="text-align: center; padding: 1rem;">Înapoi</a>
+                <div>
+                    <input class="btnsolicita reg-btn" onclick="" type="submit" name="action" value="Save"/>
+                    <a class="btnsolicita aback" href="requests">Înapoi</a>
                 </div>
             </form>
-            <h3 id="alerting" style="color:green; display: block; text-align: center;">
+            <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("message");
                     if (str == null) {
                         str = "";
@@ -118,6 +119,6 @@
             </h3>
         </div>
 
-            <script src="../jsscript.js"></script>
+        <script src="../jsscript.js"></script>
     </body>
 </html>

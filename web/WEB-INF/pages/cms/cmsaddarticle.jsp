@@ -11,24 +11,24 @@
         <link rel="stylesheet" type="text/css" href="../styless.css">
         <script src="../ckeditor/ckeditor.js"></script>
         <link href="//db.onlinewebfonts.com/c/1273d9cc8e74f85a3e5dd1b732aa2b4c?family=Avenir+Next+Cyr" rel="stylesheet" type="text/css"/>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Articles Page</title>
 
 
     </head>
-    <body style="background-image: url(../images/bani.jpg); background-attachment: fixed;">
+    <body class="money-body">
+        <%@include file="common/cmsheader.jspf" %>
+        <%@ taglib uri="http://ckeditor.com" prefix="ckeditor" %>
+        <div class="about-div articles-div">
 
-        <div id="cmsaddarticle" style="width: 50%; height: auto; padding-bottom: 2%; padding-left: 2%; padding-right: 2%;  ">
 
-            <%@include file="common/cmsheader.jspf" %>
-            <%@ taglib uri="http://ckeditor.com" prefix="ckeditor" %>
             <%
                 List<Article> listaDeArticole = (List<Article>) request.getAttribute("listaDeArticole");
                 Article artSelectat = (Article) request.getAttribute("articolSelectat");
             %>
 
-            <h2 style="text-align: center; margin: 2%;">Lista articolelor</h2>
-            <table border="1" cellspacing="1" cellpadding="1" style="margin: 2%;">
+            <h2>Lista articolelor</h2>
+            <table class='table table-striped table-hover' border="1" cellspacing="1" cellpadding="1">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -45,25 +45,20 @@
                         <td><%=art.getId()%></td>
                         <td><%=art.getTitle()%></td>
                         <td>
-                            <a href="news-actions?artId=<%=art.getId()%>&action=edit" style="color: buttonshadow">Edit</a></td>
+                            <a class="btn btn-success" href="news-actions?artId=<%=art.getId()%>&action=edit">Edit</a></td>
                         <td>
-                            <a href="news-actions?artId=<%=art.getId()%>&action=delete" style="color: buttonshadow">Delete</a></td>
+                            <a class="btn btn-danger" href="news-actions?artId=<%=art.getId()%>&action=delete">Delete</a></td>
                     </tr>     
                     <% }%>       
 
 
                 </tbody>
             </table>
-            <form action="news-actions" method="POST" style="align-content: center;">
-                <p style="display: none;">
-                    <label for="idtext">ID:</label>
-                    <br>
-                    <input type="text" name="idtext" value="<%=artSelectat.getId()%>" style="width: 99%;"/>
-                </p>
+            <form action="news-actions" method="POST">
+                <input class="id-field" type="text" name="idtext" value="<%=artSelectat.getId()%>"/>
                 <p>
                     <label for="titletext">Introduceți titlul articolului:</label>
-                    <br>
-                    <input type="text" name="titletext" value="<%=artSelectat.getTitle()%>" style="width: 99%;"/>
+                    <input id="article-title" class="form-control" type="text" name="titletext" value="<%=artSelectat.getTitle()%>"/>
                 </p>
                 <p>
                     <label for="editor1">Adaugă articolul aici:</label>
@@ -71,13 +66,12 @@
                 </p>
                 <ckeditor:replace replace="editor1" basePath="../ckeditor/"/>
 
-                <div style="text-align: center;">
-                    <input class="btnsolicita" type="submit" name="action" value="Save" />
-                    <input class="btnsolicita" type="reset" name="reset" value="Resetează" />
+                <div>
+                    <input class="btnsolicita articlebtn" type="submit" name="action" value="Save" />
                 </div>
             </form>
 
         </div>
-
+        <script src="../articlescript.js"></script>
     </body>
 </html>

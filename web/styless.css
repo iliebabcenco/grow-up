@@ -112,9 +112,8 @@ a:hover {
     margin-bottom: 4rem;
 }
 
-            
+
 .news-img {
-    
     float: right; 
     width: 600px; 
     margin-left: 15px;
@@ -135,7 +134,6 @@ a:hover {
 }
 
 .promo-contacts div {
-    width: 45%;
     box-sizing: content-box;
 }
 
@@ -310,22 +308,26 @@ a:hover {
     color: white;
 }
 
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
 .money-body {
     background-image: url(images/bani.jpg); 
     background-attachment: fixed;
+}
+.cmsmenu {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+.cmsrequestsdiv {
+    max-width: 100%;
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.articles-div {
+    background-color: white;
+}
+
+.id-field {
+    display: none;
 }

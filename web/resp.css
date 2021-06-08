@@ -221,6 +221,10 @@
     .loginbtn {
         width: 15rem;
     }
+    .articlebtn {
+        width: 15rem;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
