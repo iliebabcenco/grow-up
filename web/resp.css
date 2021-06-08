@@ -150,6 +150,22 @@
         box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
         transition: box-shadow 0.3s ease;
     }
+    
+    .bonus-div {
+        display: flex;
+        max-width: 1300px;
+    }
+    
+    .about-div {
+        max-width: 1300px;
+        padding: 3rem;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 
 }
 
@@ -182,5 +198,20 @@
     .contact-p {
         margin-top: 2rem;
     }
-
+    
+    .promo {
+        display: flex;
+        max-width: 1300px;
+    }
+    .pano {
+         height: auto;
+    }
+    
+    .slidecontainer {
+        width: 40rem;
+    }
+    .sum-par {
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+    }
 }
