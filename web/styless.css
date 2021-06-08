@@ -318,7 +318,6 @@ a:hover {
     margin: 0 auto;
 }
 .cmsrequestsdiv {
-    max-width: 100%;
     background-color: white;
     overflow: auto;
     white-space: nowrap;

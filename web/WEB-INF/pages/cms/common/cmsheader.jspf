@@ -14,7 +14,7 @@
             <li class="menuItem"><a class="menuLink" href="news">Manage News</a></li>
             <li class="menuItem"><a class="menuLink" href="save-request?action=open">Add new request</a></li>
         </ul>
-        <div ><a href="cmslogoutserv" class="special-link">Log Out</a></div>
+        <div class="sign-div"><a href="cmslogoutserv" class="special-link">Log Out</a></div>
 
     </div>
 </div>

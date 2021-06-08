@@ -155,6 +155,9 @@
     .logindiv h3, .logindiv form {
         margin-bottom: 2rem;
     }
+    .hidetd {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -224,6 +227,9 @@
     .articlebtn {
         width: 15rem;
         margin: 0 auto;
+    }
+    .hidetd {
+        display: table-cell;
     }
 }
 

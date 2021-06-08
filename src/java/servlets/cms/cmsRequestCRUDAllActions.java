@@ -125,7 +125,7 @@ public class cmsRequestCRUDAllActions extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(cmsRequestCRUDAllActions.class.getName()).log(Level.SEVERE, null, ex);
         }
-        request.getRequestDispatcher("cmsgestiuneserv").forward(request, response);
+        request.getRequestDispatcher("requests").forward(request, response);
     }
 
     private void openEditNew(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

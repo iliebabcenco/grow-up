@@ -59,7 +59,6 @@
                             if (request.getParameter("myTermField") != null) {
                                 param2 = request.getParameter("myTermField");
                             }
-
                         %>
                         <td><input id="termregistr" class="form-control" type="text" name="term" value="<%= param2%>" size="20"/></td>
                     </tr>
@@ -93,12 +92,8 @@
                         </td>
                     </tr>
                     <tr>
-
                         <td><label for="myfile">Încarcă buletin <br>de identitate:</label></td>
                         <td ><input type="file" id="myfile" name="myfile"></td>
-
-
-
                     </tr>
                 </table>
                 <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
