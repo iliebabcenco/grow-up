@@ -32,10 +32,10 @@
                         <input type="range" min="1" max="60" value="12" class="slider" id="myTermRange" onchange="updateTextTermInput(this.value);">
                         <div class="minMaxDiv"><p>1 lună</p> <p>60 luni</p></div>
                         <div>
-                            <p class="sum-par">Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p><br>
-                            <p class="sum-par">Plata lunară: <span id="rambursareSum"> 0 MDL</span></p><br>
-                            <p class="sum-par">Costul total: <span id="solicitareCost"> 0 MDL</span></p><br>	
-                            <p class="sum-par">Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p><br>
+                            <p class="sum-par">Suma solicitată: <span id="solicitareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Plata lunară: <span id="rambursareSum"> 0 MDL</span></p>
+                            <p class="sum-par">Costul total: <span id="solicitareCost"> 0 MDL</span></p>
+                            <p class="sum-par">Spre rambursare: <span id="solicitareRambursare"> 0 MDL</span></p>
                         </div>
 
                         <input class="btnsolicita" type="submit" name="action" value="Solicită acum">
@@ -48,7 +48,7 @@
 
                 <h2>Vezi care sunt șansele să obții un </h2>
                 <h1>credit online!</h1>
-                <div class="special-link"><a href="registering.html">Să începem!</a></div>
+                <div ><a class="btnsolicita" href="registering.html">Să începem!</a></div>
                 <h1>Alege Grow Up și ai doar de câștigat</h1>
 
             </div>
