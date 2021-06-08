@@ -10,7 +10,7 @@
     <body>
         <%@include file="common/header.jspf"%>
          
-        <div id="promohowrefund">
+        <div class="about-div">
             <h1>Cum rambursez</h1>
             <p>Procesul de rambursare a creditului e foarte simplu, rapid și comod. 
                 Există o multitudine de opțiuni, 

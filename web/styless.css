@@ -230,6 +230,13 @@ a:hover {
     padding-right: 1.2rem;
 }
 
+.arrow-img {
+    float: right; 
+    height: 15px; 
+    width: 15px; 
+    margin-top: 7px;
+}
+
 /* Hide the browser's default radio button */
 .containervenituri input {
     position: absolute;
