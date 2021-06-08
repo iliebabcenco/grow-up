@@ -102,7 +102,7 @@
                     </tr>
                 </table>
                     <input class="btnsolicita reg-btn" onclick="clickedButton()" type="submit" name="action" value="Solicită">
-                    <input class="btnsolicita reg-btn" onclick="GoToHomePage()" type="button" name="actionback" value="Înapoi">
+                    <a href="homeserv" class="btnsolicita aback" value="Înapoi">Back</a>
             </form>
             <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("message");

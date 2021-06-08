@@ -140,6 +140,21 @@
         margin: 1rem 0;
     }
 
+    #btnlogin {
+        margin-bottom: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .imgs-div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .logindiv {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .logindiv h3, .logindiv form {
+        margin-bottom: 2rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -199,7 +214,13 @@
     .registeringdiv {
         max-width: 40rem;
     }
-
+    .btns-div {
+        display: flex;
+        justify-content: center;
+    }
+    .loginbtn {
+        width: 15rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

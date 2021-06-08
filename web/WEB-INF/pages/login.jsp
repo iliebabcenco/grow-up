@@ -1,52 +1,44 @@
-<%-- 
-    Document   : login
-    Created on : Aug 31, 2020, 9:07:34 PM
-    Author     : AveZomer
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="styless.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="jsscript.js"></script>
+        <link rel="stylesheet" type="text/css" href="styless.css">
+        <link rel="stylesheet" type="text/css" href="resp.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Log In Page</title>
     </head>
-    <body style="background-image: url(images/bani.jpg); background-attachment: fixed;">
+    <body class="money-body">
 
-        <div id="logindiv" style="padding-top: 1%; padding-bottom: 1%; width: 25%; height: auto; margin: 75px auto;">
-            <div style="text-align: left; margin-left: 2%; margin-bottom: 2%;">
-                
-                <br>
-                <h3 style="text-align: center; margin-top: 30px;">Introduceți datele:</h3>
+        <div class="registeringdiv logindiv">
+            
 
-            </div>
+                <h3>Introduceți datele:</h3>
+
+            
             <form action="executeLogin" method="POST">
 
-                <table style="padding: 5px; margin: 20px auto;">
+                <table>
                     <tr>
-                        <td style="padding-top: 10px;">Numele utilizatorului: </td>
-                        <td style="padding-top: 10px;"><input type="text" name="username" value="" size="20" required/></td>
+                        <td>Numele utilizatorului: </td>
+                        <td><input type="text" class="form-control" name="username" value="" size="20" required/></td>
                     </tr>
-                    <tr style="margin-top: 30px;">
-                        <td style="padding-top: 10px;">Parola: </td>
-                        <td style="padding-top: 10px;"><input type="password" name="password" value="" size="20" required/></td>
+                    <tr>
+                        <td>Parola: </td>
+                        <td><input type="password" class="form-control" name="password" value="" size="20" required/></td>
                     </tr>
                 </table>
-                <div style="text-align: center;">
-                    <input id="btnlogin" type="submit" name="action" value="Log In"/>
-                    <input class="btnback" onclick="GoToHomePage()" type="submit" name="actionback" value="Înapoi"/>
+                <div class="btns-div">
+                    <input id="btnlogin" class="btnsolicita loginbtn" type="submit" name="action" value="Log In"/>
+                    <a href="homeserv" class="btnsolicita aback loginbtn" value="Înapoi">Back</a>
                 </div>
             </form>
-            <div style="text-align: center; margin-bottom: 7%;">
-                <img src="images/masc.png" style="margin-top: 2%;">
+            <div class="imgs-div">
+                <img src="images/masc.png"">
                 <img src="images/fem.png">
             </div>
-            <h3 id="alerting" style="color:red; display: block; text-align: center;">
-
-
+            <h3 id="alerting">
                 <%  String str = (String) request.getAttribute("loginerror");
                     if (str == null) {
                         str = "";

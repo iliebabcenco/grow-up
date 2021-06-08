@@ -43,6 +43,11 @@ a:hover {
     transition: 0.5s;
 }
 
+.aback {
+    text-align: center;
+    height: 61px;
+}
+
 .ask-div {
     margin: 15px auto;
     margin-bottom: 50px;
