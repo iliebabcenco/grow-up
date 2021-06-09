@@ -1,0 +1,332 @@
+.mainContent {
+    width: auto;
+    background-color: white;
+    margin: 0px auto;
+}
+body {
+    font-family: "Avenir Next Cyr";
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #FF8900;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+}
+
+a {
+    color: #003366;	
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: #FF8900;
+    transition-property: background-color, color;
+    transition: 0.5s;
+}
+
+.aback {
+    text-align: center;
+    height: 61px;
+}
+
+.ask-div {
+    margin: 15px auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.collapsible {
+    color: #003366;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.active, .collapsible:hover {
+    color: #FF8900;
+    transition: 0.5s;
+
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+
+.logo, .deviz {
+    color: #003366;
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    font-size: 36px;
+}
+.deviz {
+    padding: 1rem;
+}
+
+.list-img {
+    width: 5rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+.aboutUsList p {
+    clear: both;
+    margin-bottom: 1rem; 
+}
+
+.aboutUsList {
+    margin-bottom: 4rem;
+}
+
+
+.news-img {
+    float: right; 
+    width: 600px; 
+    margin-left: 15px;
+}
+
+.news-section img, .news-section table {
+    max-width: 100%;
+}
+
+.promo-contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.locations-list {
+    list-style-type: none; 
+    margin-right: 5rem;
+}
+
+.promo-contacts div {
+    box-sizing: content-box;
+}
+
+
+.btnsolicita:hover, .btnback:hover, #btnlogin:hover  {
+    color: #003366;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    transition: 0.5s;
+
+}
+
+.pano {
+    background-image: url("images/sunysucces.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: center center;
+    backface-visibility: hidden;
+    animation: slideBg 8s linear 3s infinite alternate;
+    animation-timing-function: ease-in-out 6s;
+}
+@keyframes slideBg{
+    0%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    20%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    40%{
+        background-image: url("images/sunysucces.jpg");
+    }
+    60%{
+        background-image: url("images/3.jpg");
+    }
+    80%{
+        background-image: url("images/3.jpg");
+    }
+    100%{
+        background-image: url("images/3.jpg");
+    }
+}
+
+
+.bonus-div {
+    width: 98%;
+    margin: auto;
+    margin-bottom: 75px;
+    padding: 1rem;
+    background-image: url("images/fon.jpg");
+    background-size: cover;
+    font-size: 1.5rem;
+    -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+}
+
+.footer {
+    background-color: #0A2536;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.about-div {
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.howobtain {
+    width: 100%;
+    padding-right: 1.2rem;
+}
+
+.arrow-img {
+    float: right; 
+    height: 15px; 
+    width: 15px; 
+    margin-top: 7px;
+}
+
+/* Hide the browser's default radio button */
+.containervenituri input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.medium-navbar-ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.footerCenter {
+    text-align: center;
+}
+
+.navm-link {
+    color: white;
+    margin: 1rem;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containervenituri:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containervenituri input:checked ~ .checkmark {
+    background-color: #FF8900;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containervenituri input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containervenituri .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+.containervenituri {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clearfix {
+    clear: both;
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.money-body {
+    background-image: url(images/bani.jpg); 
+    background-attachment: fixed;
+}
+.cmsmenu {
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+.cmsrequestsdiv {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.articles-div {
+    background-color: white;
+}
+
+.id-field {
+    display: none;
+}

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Build-Jdk: 1.6.0_22
+Built-By: CKSource - Frederico Knabben
+Implementation-Title: CKEditor for Java - Core
+Implementation-URL: http://ckeditor.com
+Implementation-Vendor-Id: com.ckeditor
+Implementation-Version: 2.0
+

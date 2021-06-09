@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/GrowUp">
+<Resource auth="Container" 
+            driverClassName="com.mysql.jdbc.Driver" 
+            maxIdle="30" maxTotal="100" 
+            maxWaitMillis="10000" 
+            name="jdbc/growupdb" 
+            password="parola1" 
+            type="javax.sql.DataSource" 
+            url="jdbc:mysql://localhost:3306/growupdb?characterEncoding=UTF8"
+            username="javauser1"/>
+</Context>
