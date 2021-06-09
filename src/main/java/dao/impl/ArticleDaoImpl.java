@@ -18,6 +18,7 @@ public class ArticleDaoImpl implements ObjectDaoIntf<Article> {
     private DataSource ds;
 
     private ArticleDaoImpl(DataSource ds) {
+        System.out.println("create a new ArticleDaoImpl");
         this.ds = ds;
     }
 
@@ -89,6 +90,7 @@ public class ArticleDaoImpl implements ObjectDaoIntf<Article> {
 
     @Override
     public List<Article> findAll() {
+        System.out.println("FindAll Articles method in DAO impl");
         String sql = "SELECT * FROM articles;";
         List<Article> list = new ArrayList<>();
          try (Connection conn = ds.getConnection();

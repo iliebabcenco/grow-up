@@ -23,7 +23,7 @@ public class newsserv extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        System.out.println("we are before calling findAll in newsserv");
         List<Article> listaDeArticole = artJdService.findAll();
 
         request.setAttribute("listaDeArticole", listaDeArticole);
