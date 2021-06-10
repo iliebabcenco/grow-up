@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a web appcliation is destinated for microfinance organizations which meaning is to manage loans and news from a webpage. 
+This web application is destinated for microfinance organizations which meaning is to manage loans and news from a webpage. 
 
 I implemented next features in this project: 
 1. Full navigation part which contains next pages: About company, how to obtain a loan, how to refund, q&a, news, contacts sections;
