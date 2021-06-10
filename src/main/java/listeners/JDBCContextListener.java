@@ -26,6 +26,7 @@ public class JDBCContextListener implements ServletContextListener {
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:comp/env");
             DataSource ds = (DataSource) envContext.lookup("jdbc/heroku_a6ba2d62a41cee6");
+            System.out.println("Connection to database: "+ds.toString());
             
             RequestDaoImpl reqService = RequestDaoImpl.getInstance(ds);
             GrowUserDaoImpl usService = GrowUserDaoImpl.getInstance(ds);
