@@ -67,11 +67,48 @@
                 </configuration>
             </plugin>
             <plugin>
+                <!--                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version>-->
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
+                <version>1.1.1</version>           
+                <configuration>               
+                    <includes>
+                        <include>tomcat-heroku-server-conf/</include>
+                    </includes>
+                    <jdkVersion>1.8</jdkVersion>
+                    <configVars>
+                        <CATALINA_OPTS>-XX:MaxPermSize=512M -Xmx1024M -Ddatabase.url="jdbc:mysql://us-cdbr-east-04.cleardb.com/heroku_a6ba2d62a41cee6?reconnect=true"  -Ddatabase.user="be6704723d9c12" -Ddatabase.password="c6f2818e" -Ddatabase.driver=com.mysql.jdbc.Driver</CATALINA_OPTS>
+                        <JAVA_OPTS></JAVA_OPTS>
+                    </configVars>      
+                    <webappRunnerVersion>8.0.33.1</webappRunnerVersion>
+                    <warFile>admin/target/admin.war</warFile>
+                </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.heroku</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>9.0.41.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>2.6</version>
@@ -95,7 +132,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

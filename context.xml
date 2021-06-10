@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/GrowUp">
+<Resource auth="Container" 
+            driverClassName="com.mysql.jdbc.Driver" 
+            maxIdle="30" maxTotal="100" 
+            maxWaitMillis="10000" 
+            name="jdbc/heroku_a6ba2d62a41cee6" 
+            password="c6f2818e" 
+            type="javax.sql.DataSource"
+            url="jdbc:mysql://us-cdbr-east-04.cleardb.com/heroku_a6ba2d62a41cee6?reconnect=true"
+            username="be6704723d9c12"/>
+</Context>
+
+<!--auth="Container"
+              type="javax.sql.DataSource" 
+              username="b888446f2789ce" 
+              password="28fa221e"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_17744ef452a6a8d"
+              maxActive="10" 
+              maxIdle="4"/>-->
