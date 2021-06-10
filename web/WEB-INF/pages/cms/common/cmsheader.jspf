@@ -1,0 +1,21 @@
+<%@ page pageEncoding="UTF-8" %>
+<script src="https://kit.fontawesome.com/1b3f199c8f.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../resp.css"/>
+<link rel="stylesheet" href="../styless.css"/>
+<div class="menu cmsmenu">
+    <div id="top-logo" class="logo"><a id="logohref" href="../home.html">Grow Up</a></div>
+    <div class="nav-part-menu">
+        <a href="#" class="display-menuLink" onclick="clickNavMenu()"><i class="fas fa-bars fa-2x"></i></a>
+    </div>
+    <div class="nav-part cms-menu-div">
+        <ul class="menuList">
+            <li class="menuItem"><a class="menuLink" href="requests">Manage Requests</a></li>
+            <li class="menuItem"><a class="menuLink" href="../news.html">Check news</a></li>
+            <li class="menuItem"><a class="menuLink" href="news">Manage News</a></li>
+            <li class="menuItem"><a class="menuLink" href="save-request?action=open">Add new request</a></li>
+        </ul>
+        <div class="sign-div"><a href="cmslogoutserv" class="special-link">Log Out</a></div>
+
+    </div>
+</div>
+<script src="../jsscript.js"></script>

@@ -1,0 +1,284 @@
+@media only screen and (min-width: 300px) {
+    #logo-item {
+        display: none;
+    }
+    .nav-part {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 2rem;
+        box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        color: #003366;
+    }
+    .menuList {
+        list-style-type: none;
+        margin-top: 1rem;
+        padding: 0;
+        text-align: center;
+    }
+    .menuItem {
+        font-weight: bold;
+        border-bottom: 1px solid #003366;
+    }
+    .sign-div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .menuLink {
+        display: block;
+        padding: 1rem;
+    }
+    .special-link, .btnsolicita {
+        display: block;
+        padding: 1rem;
+        background-color: #FF8900;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    .special-link:hover {
+        color: #003366;
+    }
+    .btnsolicita  {
+        border: none;
+        width: 100%;
+        font-size: 1.2rem;
+        color: #003366;
+    }
+    .contact-p {
+        margin: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: #FF8900;
+    }
+
+    .promo, .about-div {
+        width: 98%;
+        margin: 50px auto;
+        height: auto;
+        -webkit-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        border-radius: 5px;
+        color: #003366;
+    }
+    .about-div {
+        font-size: 1.1rem;
+    }
+
+    .pano {
+        width: 100%;
+        height: 600px;
+
+    }
+
+    .slider {
+        appearance: none;
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        background: #003366;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+
+    .sum-par {
+        color: #003366;
+    }
+
+    .sum-par, .calc-details-p {
+        font-size: 1.2rem;
+    }
+
+    .slidecontainer {
+        padding: 2rem;
+        color: #003366;
+
+    }
+    .calc-title {
+        text-align: center;
+    }
+    .minMaxDiv {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        flex-direction: column;
+
+    }
+    
+    .footer-part {
+        text-align: center;
+        margin: 1rem 0;
+    } 
+
+    .registeringdiv {
+        margin: 3rem auto;
+        background-color: white;
+        width: 95%;
+        padding: 2rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+       
+    }
+    
+    .registeringdiv h3 {
+         text-align: center;
+    }
+    
+    .registeringdiv table {
+        margin: 1rem auto;
+    }
+    
+    .reg-btn {
+        margin: 1rem 0;
+    }
+
+    #btnlogin {
+        margin-bottom: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .imgs-div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .logindiv {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .logindiv h3, .logindiv form {
+        margin-bottom: 2rem;
+    }
+    .hidetd {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-part {
+        display: none;
+    }
+
+    .menuItem {
+        border: none;
+    }
+    .menuList {
+        display: flex;
+        justify-content: center;
+    }
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .special-link {
+        width: 12em;
+        display: inline-block;
+    }
+    .sign-div {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .menuLink:hover, #logohref:hover  {
+        color: #FF8900;
+        transition: color 0.2s ease;
+    }
+    .special-link:hover {
+        box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.55);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .bonus-div {
+        display: flex;
+        max-width: 1300px;
+    }
+
+    .about-div {
+        max-width: 1300px;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+    }
+    .footer-part {
+        text-align: center;
+        margin: 0 3rem;
+    }
+    .registeringdiv {
+        max-width: 40rem;
+    }
+    .btns-div {
+        display: flex;
+        justify-content: center;
+    }
+    .loginbtn {
+        width: 15rem;
+    }
+    .articlebtn {
+        width: 15rem;
+        margin: 0 auto;
+    }
+    .hidetd {
+        display: table-cell;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #logo-item {
+        display: block;
+    }
+    .nav-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .display-menuLink {
+        display: none;
+    }
+    .special-link {
+        width: 5rem;
+        display: inline;
+
+    }
+    #top-logo {
+        display: none;
+    }
+    .logo {
+        padding-right: 2rem;
+    }
+    .menu {
+        padding: 0.5rem;
+    }
+    .contact-p {
+        margin-top: 2rem;
+    }
+
+    .promo {
+        display: flex;
+        max-width: 1300px;
+    }
+    .pano {
+        height: auto;
+    }
+
+    .slidecontainer {
+        width: 40rem;
+    }
+    .sum-par {
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+    }
+    .howobtain-main {
+        display: flex;
+    }
+}
