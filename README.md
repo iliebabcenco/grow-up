@@ -43,7 +43,7 @@ I implemented next features in this project:
 
 ### Deployment
 
-[Check the live version from Heroku](http://grow-up-project.herokuapp.com/)
+[Check the live version from Heroku](http://grow-up-project.herokuapp.com/home.html)
 `P.S. If you wanna check cms part use administrator1 as username and also as password.`
 
 ## Authors
