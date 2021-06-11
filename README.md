@@ -2,7 +2,7 @@
 
 ## Description
 
-This web application is destinated for microfinance organizations which meaning is to manage loans and news from a webpage. 
+This web application is destined for microfinance organizations, meaning to manage loans and news from a web page. 
 
 I implemented next features in this project: 
 1. Full navigation part which contains next pages: About company, how to obtain a loan, how to refund, q&a, news, contacts sections;
@@ -44,6 +44,7 @@ I implemented next features in this project:
 ### Deployment
 
 [Check the live version from Heroku](http://grow-up-project.herokuapp.com/)
+`P.S. If you wanna check cms part use administrator1 as username and also as password.`
 
 ## Authors
 
