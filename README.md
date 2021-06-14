@@ -66,4 +66,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Microverse](https://www.microverse.org/)
+I did this project based on [IUCOSOFT](https://iucosoft.com/) courses
+
